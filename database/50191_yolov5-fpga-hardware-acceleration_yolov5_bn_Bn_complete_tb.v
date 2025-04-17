@@ -59,7 +59,7 @@ initial begin
 		reset<=1'b0;
 		#200
 	
-	$stop;
+	$finish;
 end
  Bn_complete #( .DATA_WIDTH(DATA_WIDTH),
            .size(size),

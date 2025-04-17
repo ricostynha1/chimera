@@ -300,7 +300,7 @@ parameter MAX_NUM_OF_REFRESH_COMMANDS_POSTPONED = 8;  // 9 commands. one execute
 		
 		repeat(STOP_TIMING/CLK_PERIOD) @(posedge clk_sim);  // minimum runtime
 		
-		$stop;
+		$finish;
 	end
 
 	// note that sensitive list is omitted in always block

@@ -127,7 +127,7 @@ module lpm_fifo_dc_async (  data,
         begin
             $display ("Error! lpm_showahead must be ON or OFF.");
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
 
         i_overflow_checking = eva.GET_PARAMETER_VALUE(lpm_hint, "OVERFLOW_CHECKING");
@@ -137,7 +137,7 @@ module lpm_fifo_dc_async (  data,
             begin
                 $display ("Error! OVERFLOW_CHECKING must equal to either 'ON' or 'OFF'");
                 $display("Time: %0t  Instance: %m", $time);
-                $stop;
+                $finish;
             end
             else
                 i_overflow_checking = overflow_checking;
@@ -146,7 +146,7 @@ module lpm_fifo_dc_async (  data,
         begin
             $display ("Error! OVERFLOW_CHECKING must equal to either 'ON' or 'OFF'");
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
 
         i_underflow_checking = eva.GET_PARAMETER_VALUE(lpm_hint, "UNDERFLOW_CHECKING");
@@ -156,7 +156,7 @@ module lpm_fifo_dc_async (  data,
             begin
                 $display ("Error! UNDERFLOW_CHECKING must equal to either 'ON' or 'OFF'");
                 $display("Time: %0t  Instance: %m", $time);
-                $stop;
+                $finish;
             end
             else
                 i_underflow_checking = underflow_checking;
@@ -165,7 +165,7 @@ module lpm_fifo_dc_async (  data,
         begin
             $display ("Error! UNDERFLOW_CHECKING must equal to either 'ON' or 'OFF'");
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
 
         use_eab = eva.GET_PARAMETER_VALUE(lpm_hint, "USE_EAB");
@@ -175,7 +175,7 @@ module lpm_fifo_dc_async (  data,
         begin
             $display ("Error! USE_EAB must equal to either 'ON' or 'OFF'");
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
 
         intended_device_family = eva.GET_PARAMETER_VALUE(lpm_hint, "INTENDED_DEVICE_FAMILY");
@@ -185,7 +185,7 @@ module lpm_fifo_dc_async (  data,
         begin
             $display ("Error! Unknown INTENDED_DEVICE_FAMILY=%s.", intended_device_family);
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
 
         for (i = 0; i < (1 << lpm_widthu); i = i + 1)

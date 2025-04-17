@@ -37,7 +37,7 @@ module Memory_TB ();
     #(`clock_dur * 1 * 2);
     write_en = 1'b0;
     read_en  = 1'b1;
-    #(`clock_dur * 1 * 2) $stop;
+    #(`clock_dur * 1 * 2) $finish;
   end
 
 endmodule

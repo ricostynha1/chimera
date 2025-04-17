@@ -17,7 +17,7 @@ module testbench;
         repeat (8) #10 key <= $random;
 
         `ifdef MODEL_TECH  // Mentor ModelSim and Questa
-            $stop;
+            $finish;
         `else
             $finish;
         `endif

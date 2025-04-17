@@ -79,7 +79,7 @@ module tb_cordic;
 		#0			CLOCK100 = 0; CLOCK150 = 0; CLOCK65 = 0; RESET_N = 0; fp_ln = $fopen("./cordic_ln.txt", "w");
 		#100		RESET_N = 1;
 		/// 结束
-		#1500000	$stop; $fclose(fp_ln);
+		#1500000	$finish; $fclose(fp_ln);
 	end
 	
 endmodule

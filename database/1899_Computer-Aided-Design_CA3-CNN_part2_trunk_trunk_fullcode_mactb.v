@@ -23,7 +23,7 @@ module mactb();
     #10 start = 1;
     #10 start = 0;
 
-    #90000 $stop;
+    #90000 $finish;
   end
 
   initial

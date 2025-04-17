@@ -99,7 +99,7 @@
 					r = 0;
 
 					$display("ERROR: Unknown alu cmd: %b \n", cmd);
-					//$stop;
+					//$finish;
 
 				end
 		endcase
@@ -778,7 +778,7 @@ module ID_stage
 						alu_src2_mux			= 1'bx;		// S4
 
 						$display("ERROR: Unknown Instruction: %b", ir_op_code_with_bubble);
-						//$stop;
+						//$finish;
 
 					end
 			endcase
@@ -840,7 +840,7 @@ module ID_stage
 						branch_taken = 0;
 
 						$display("ERROR: Unknown branch condition %b, in branch instruction %b \n", ir_dest_with_bubble, ir_op_code_with_bubble);
-						//$stop;
+						//$finish;
 					
 					end
 			endcase

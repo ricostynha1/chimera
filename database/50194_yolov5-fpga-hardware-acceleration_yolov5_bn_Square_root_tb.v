@@ -70,7 +70,7 @@ initial begin
                 reset<=1'b0;
                 #400
 	
-	$stop;
+	$finish;
 end
 
 Square_root UUT

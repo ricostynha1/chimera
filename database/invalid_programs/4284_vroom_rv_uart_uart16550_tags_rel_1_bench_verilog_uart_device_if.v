@@ -291,7 +291,7 @@ begin
     else
       begin
         $fdisplay(mcd,"\n(%0t) ERROR: Unknown instruction in the vapi.log (%0d).", $time, ii);
-        $stop;
+        $finish;
       end
 
     ii=ii+1;
@@ -299,7 +299,7 @@ begin
   $fdisplay(mcd,"\n\n(%0t) END OF UART SIMULATION DETECTED", $time);
   #1000;
   $fclose(mcd);
-  $stop;
+  $finish;
 end
 //////////////////////////////////////////////////////////////////////////////////////
 //                                                                                  //
@@ -762,7 +762,7 @@ task read_fifo_and_compare;
       begin
         $fdisplay(mcd,"(%0t) \t\tERROR: Reference packet differs from received packet (reference_packet=%0x, data_from_fifo=%0x)", $time,
                   reference_packet, data_from_fifo);
-        $stop;
+        $finish;
       end
     else
       $fdisplay(mcd,"\t\t(%0t) Reference packet equals to received packet (reference_packet=%0x, data_from_fifo=%0x)", $time,
@@ -815,7 +815,7 @@ begin
                 if(fifo_full)
                   begin
                     $fdisplay(mcd,"(%0t) \t\tERROR: Fifo full.", $time);
-                    $stop;
+                    $finish;
                   end
                 fifo[fifo_write_adr] <=#1 data_for_fifo;
                 fifo_write_adr <=#1 fifo_write_adr + 1;
@@ -853,7 +853,7 @@ task check_fifo_empty;
           $fdisplay(mcd,"(%0t) \t\tERROR: Fifo is empty but shouldn't be.", $time);
         else
           $fdisplay(mcd,"(%0t) \t\tERROR: Fifo is not empty but should be.", $time);
-        $stop;
+        $finish;
       end
   end
 

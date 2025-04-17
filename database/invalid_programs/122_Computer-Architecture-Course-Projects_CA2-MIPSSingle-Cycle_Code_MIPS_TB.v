@@ -15,7 +15,7 @@ module MIPS_TestBench ();
 
   initial begin
     #(`clk_dur) rst = 1'b0;
-    #(`clk_dur * 1000) $stop;
+    #(`clk_dur * 1000) $finish;
   end
 
   always begin

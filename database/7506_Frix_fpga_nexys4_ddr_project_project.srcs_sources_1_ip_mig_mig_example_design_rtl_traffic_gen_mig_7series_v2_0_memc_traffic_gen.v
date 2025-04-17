@@ -361,7 +361,7 @@ wire [BL_WIDTH-1:0] memc_bl_o;
     if((MEM_BURST_LEN !== 4) && (MEM_BURST_LEN !== 8) && (MEM_BURST_LEN !== 2)) 
     begin: NO_OTF_Warning_Error
       $display("Current Traffic Generator logic does not support OTF (On The Fly) Burst Mode!");
-      $stop;
+      $finish;
     end
     else
     begin: Dummy1
@@ -379,7 +379,7 @@ if (memc_cmd_en_o &&
    $display("Assigned Address Space: Start_Address = 0x%h ; End_Addr = 0x%h",start_addr_i,end_addr_i); 
    $display("Attempted area = 0x%h",memc_cmd_addr_o + (memc_cmd_bl_o - 1) * (DWIDTH/8)); 
    
-   $stop;
+   $finish;
    end
 else
 begin: No_Error_Display

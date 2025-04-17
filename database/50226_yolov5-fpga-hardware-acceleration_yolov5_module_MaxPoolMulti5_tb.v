@@ -53,7 +53,7 @@ reset = 1;
 #(PERIOD)
 	 // reset = 0;
 	  #200
-$stop;
+$finish;
 end
 MaxPoolMulti5 UUT (clk, reset, mpInput, mpOutput);
 endmodule

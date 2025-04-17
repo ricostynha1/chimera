@@ -80,7 +80,7 @@ filters2<=64'b1001110110001110100110011000010100100001111110110010101110001101;/
 x<=16'b0011110000000000;
 # (PERIOD/2) reset<=1'b0;
 # (1000*PERIOD)
-	$stop;
+	$finish;
 end
 
 SPP UUT (clk,reset,x,filters1,filters2,out);

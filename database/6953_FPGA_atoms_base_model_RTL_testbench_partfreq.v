@@ -53,7 +53,7 @@ initial begin
 	
 	#10_000;                    // 仿真时间为 10000 个时间单位，也即 10000*1ns=10000ns
 	
-	$stop;
+	$finish;
 end
 
 

@@ -36,7 +36,7 @@ always @ (posedge clk)
     end else if (count < 100000) begin
         count <= count + 1;
     end else begin
-        $stop;
+        $finish;
     end
 
 

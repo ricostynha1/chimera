@@ -24,11 +24,11 @@ module RISC_V_tb1();
     if(MemWrite) begin
         if(DataAdr === 100 & WriteData === 25) begin
             $display("Simulation succeeded");
-            $stop;
+            $finish;
         end 
         else if (DataAdr !== 96) begin
             $display("Simulation failed");
-            $stop;
+            $finish;
         end
     end
  end

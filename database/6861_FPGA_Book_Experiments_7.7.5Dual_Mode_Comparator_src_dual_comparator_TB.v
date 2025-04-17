@@ -30,7 +30,7 @@ module dual_comparator_TB;
 		#50; //agbt=0  since 15<240
 		mode=1; //signed comparison
 		#50; //agbt=1 since 15>-16
-		$stop;
+		$finish;
 
 		
 

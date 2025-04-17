@@ -100,7 +100,7 @@ module serial_parallel_registers_tb;
         end
 
         // Finalize test
-        #20 $stop;
+        #20 $finish;
     end
 
     // Dump waveforms

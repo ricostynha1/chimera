@@ -107,7 +107,7 @@ module ddr2_mem_model_ram_module (
         begin
             $write($time);
             $write(" --- Data could not be written, increase array depth or use full memory model --- ");
-            $stop;
+            $finish;
         end
     end
 

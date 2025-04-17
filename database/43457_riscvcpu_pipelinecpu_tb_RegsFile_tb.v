@@ -35,7 +35,7 @@ module RegsFile_tb;
 	always begin
 		i = i + 1;
 		#500
-		if (i == 50) $stop;
+		if (i == 50) $finish;
 	end
 	RegsFile regs(clk, regNum0, regNum1, regReadData0, regReadData1, regsWriteEnable, regWriteNum, regWriteData);
 

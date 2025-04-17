@@ -237,7 +237,7 @@ input   [RAM_ADDR_WIDTH-1:0]    p1_addr;
 begin
     if (p0_val & p1_val & (p0_addr == p1_addr)) begin
         $display("ERROR Checker: %m: Collission at address 0x%h at @%t. No ordering is guaranteed!", p0_addr, $time);
-        $stop;
+        $finish;
     end
 end
 endtask

@@ -58,7 +58,7 @@ module jt63701y #(
 initial begin
     if( MODE<1 || MODE>3 ) begin
         $display("%m: MODE must be 1,2 or 3");
-        $stop;
+        $finish;
     end
 end
 `endif

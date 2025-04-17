@@ -226,7 +226,7 @@ module global_resource_table_tb (/*AUTOARG*/) ;
       deallocate_wg(0,0);
       
       repeat(100) @(posedge clk);
-      $stop;
+      $finish;
       
    end // initial begin
    

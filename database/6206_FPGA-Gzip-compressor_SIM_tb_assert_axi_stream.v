@@ -46,10 +46,10 @@ always @ (posedge clk or negedge rstn)
     if (~rstn) begin
     end else begin
         if ((~tready_d) & tvalid_d) begin         // At last cycle, sender sended a data, but receiver not avaiable, assert that sender is still sending a data at this cycle, and assert that data not change
-            if (   1'b1 !== tvalid) begin $display("*** error : AXI-stream sender behavior abnormal : Illegal withdraw tvalid"); $stop; end
-            if (tdata_d !== tdata ) begin $display("*** error : AXI-stream sender behavior abnormal : Illegal change in tdata"); $stop; end
-            if (tlast_d !== tlast ) begin $display("*** error : AXI-stream sender behavior abnormal : Illegal change in tlast"); $stop; end
-            if (tkeep_d !== tkeep ) begin $display("*** error : AXI-stream sender behavior abnormal : Illegal change in tkeep"); $stop; end
+            if (   1'b1 !== tvalid) begin $display("*** error : AXI-stream sender behavior abnormal : Illegal withdraw tvalid"); $finish; end
+            if (tdata_d !== tdata ) begin $display("*** error : AXI-stream sender behavior abnormal : Illegal change in tdata"); $finish; end
+            if (tlast_d !== tlast ) begin $display("*** error : AXI-stream sender behavior abnormal : Illegal change in tlast"); $finish; end
+            if (tkeep_d !== tkeep ) begin $display("*** error : AXI-stream sender behavior abnormal : Illegal change in tkeep"); $finish; end
         end
     end
 end endgenerate
@@ -60,7 +60,7 @@ always @ (posedge clk or negedge rstn)
     if (~rstn) begin
     end else begin
         if (tready_d & (~tvalid_d)) begin         // At last cycle, receiver avaiable, but sender not sended a data, assert that receiver is still avaiable at this cycle
-            if (1'b1 !== tready) begin $display("*** warning : AXI-stream receiver behavior abnormal : Illegal withdraw tvalid"); $stop; end
+            if (1'b1 !== tready) begin $display("*** warning : AXI-stream receiver behavior abnormal : Illegal withdraw tvalid"); $finish; end
         end
     end
 end endgenerate

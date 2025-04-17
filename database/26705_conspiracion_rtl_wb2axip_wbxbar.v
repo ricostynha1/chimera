@@ -1076,20 +1076,20 @@ module	wbxbar #(
 		if (NM == 0)
 		begin
 			$display("ERROR: At least one master must be defined");
-			$stop;
+			$finish;
 		end
 
 		if (NS == 0)
 		begin
 			$display("ERROR: At least one slave must be defined");
-			$stop;
+			$finish;
 		end
 
 		if (OPT_STARVATION_TIMEOUT != 0 && OPT_TIMEOUT == 0)
 		begin
 			$display("ERROR: The starvation timeout is implemented as part of the regular timeout");
 			$display("  Without a timeout, the starvation timeout will not work");
-			$stop;
+			$finish;
 		end
 		// }}}
 	end

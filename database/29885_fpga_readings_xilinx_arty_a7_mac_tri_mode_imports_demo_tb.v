@@ -634,7 +634,7 @@ module demo_tb;
   begin
     #680000000;
     $display("** ERROR: Simulation Running Forever");
-    $stop;
+    $finish;
   end
 
   
@@ -878,7 +878,7 @@ module demo_tb;
           $display("Test completed successfully");
        end
        $display("Simulation Stopped");
-       $stop;
+       $finish;
     end
     else begin
 
@@ -923,7 +923,7 @@ module demo_tb;
          $display("Test completed successfully");
        end
        $display("Simulation Stopped");
-       $stop;
+       $finish;
      end
   end // p_management
 

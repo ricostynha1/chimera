@@ -22,7 +22,7 @@ module tb();
 		#7650 sel = 2'b 00 ;
 		#7650 sel = 2'b 01 ;
 		#2000
-		$stop ;
+		$finish ;
 	end
 endmodule
 

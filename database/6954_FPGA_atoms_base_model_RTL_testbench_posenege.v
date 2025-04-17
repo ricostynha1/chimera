@@ -60,7 +60,7 @@ initial begin
     end
 
     #10_000;
-    $stop;
+    $finish;
 end
 
 endmodule

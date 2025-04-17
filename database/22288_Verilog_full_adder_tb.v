@@ -19,7 +19,7 @@
  		#10 a=1;	//{cin,a,b}=3'b010
  		#10 b=1;	//{cin,a,b}=3'b011
  		#10 cin=1;	//{cin,a,b}=3'b111
- 		#10 $stop;
+ 		#10 $finish;
  	end // initial
 
  endmodule

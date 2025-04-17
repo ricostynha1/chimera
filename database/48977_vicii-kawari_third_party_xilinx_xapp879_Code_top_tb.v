@@ -93,6 +93,6 @@ module top_tb  ();
       SSTEP=1'b0;
       #(3500*one_ns)
 
-      $stop;
+      $finish;
    end
 endmodule

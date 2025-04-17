@@ -264,13 +264,13 @@ module minimax (
 `ifdef ENABLE_ASSERTS
     if (microcode & op32_e & ~bubble_e) begin
       $display("Double trap!");
-      $stop;
+      $finish;
     end
 
     // Check to make sure the microcode doesn't exceed the program counter size
     if (UC_BASE[31:PC_BITS] != 0) begin
       $display("Microcode at 0x%0h cannot be reached with a %d-bit program counter!", UC_BASE, PC_BITS);
-      $stop;
+      $finish;
     end
 `endif
 

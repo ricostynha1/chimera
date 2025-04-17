@@ -154,20 +154,20 @@ module tb_minmax();
         if ( !reset ) begin
             if ( m_valid != exp_valid ) begin
                 $display("error : m_valid");
-                $stop;
+                $finish;
             end
             
             if ( m_valid ) begin
                 if ( m_en != exp_en ) begin
                     $display("error : m_en");
-                    $stop;
+                    $finish;
                 end
                 
                 if ( m_en ) begin
-                    if ( m_index  != exp_index )            begin   $display("error : m_index");        $stop; end
-                    if ( m_data != exp_data )               begin   $display("error : m_data");         $stop; end
-                    if ( m_user != exp_user )               begin   $display("error : m_user");         $stop; end
-                    if ( m_common_user != exp_common_user ) begin   $display("error : m_common_user");  $stop; end
+                    if ( m_index  != exp_index )            begin   $display("error : m_index");        $finish; end
+                    if ( m_data != exp_data )               begin   $display("error : m_data");         $finish; end
+                    if ( m_user != exp_user )               begin   $display("error : m_user");         $finish; end
+                    if ( m_common_user != exp_common_user ) begin   $display("error : m_common_user");  $finish; end
                 end
             end
         end

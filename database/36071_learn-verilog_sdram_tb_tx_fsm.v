@@ -56,7 +56,7 @@ module tb_tx_fsm();
     initial begin
         tx_send(32'ha1b2c3d4);
         tx_send(32'h9f7e5d3c);
-        $stop;
+        $finish;
     end
 
     task tx_send;

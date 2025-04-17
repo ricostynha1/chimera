@@ -73,7 +73,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					device_family_check ( .error(1'b1) );
@@ -82,7 +82,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_avl_data_width_check ( .error(1'b1) );
@@ -91,7 +91,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_avl_addr_width_check ( .error(1'b1) );
@@ -100,7 +100,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_avl_word_addr_width_check ( .error(1'b1) );
@@ -109,7 +109,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_avl_size_width_check ( .error(1'b1) );
@@ -118,7 +118,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_avl_be_width_check ( .error(1'b1) );
@@ -127,7 +127,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					driver_signature_check ( .error(1'b1) );
@@ -136,7 +136,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_gen_byte_addr_check ( .error(1'b1) );
@@ -145,7 +145,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_num_driver_loop_check ( .error(1'b1) );
@@ -154,7 +154,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_enable_unix_id_check ( .error(1'b1) );
@@ -163,7 +163,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_use_unix_id_check ( .error(1'b1) );
@@ -172,7 +172,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_random_byte_enable_check ( .error(1'b1) );
@@ -181,7 +181,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_enable_read_compare_check ( .error(1'b1) );
@@ -190,7 +190,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_power_of_two_bursts_only_check ( .error(1'b1) );
@@ -199,7 +199,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_burst_on_burst_boundary_check ( .error(1'b1) );
@@ -208,7 +208,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_do_not_cross_4kb_boundary_check ( .error(1'b1) );
@@ -217,7 +217,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_timeout_counter_width_check ( .error(1'b1) );
@@ -226,7 +226,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_max_read_latency_check ( .error(1'b1) );
@@ -235,7 +235,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_single_rw_seq_addr_count_check ( .error(1'b1) );
@@ -244,7 +244,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_single_rw_rand_addr_count_check ( .error(1'b1) );
@@ -253,7 +253,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_single_rw_rand_seq_addr_count_check ( .error(1'b1) );
@@ -262,7 +262,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_block_rw_seq_addr_count_check ( .error(1'b1) );
@@ -271,7 +271,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_block_rw_rand_addr_count_check ( .error(1'b1) );
@@ -280,7 +280,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_block_rw_rand_seq_addr_count_check ( .error(1'b1) );
@@ -289,7 +289,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_block_rw_block_size_check ( .error(1'b1) );
@@ -298,7 +298,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_template_stage_count_check ( .error(1'b1) );
@@ -307,7 +307,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_seq_addr_gen_min_burstcount_check ( .error(1'b1) );
@@ -316,7 +316,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_seq_addr_gen_max_burstcount_check ( .error(1'b1) );
@@ -325,7 +325,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_rand_addr_gen_min_burstcount_check ( .error(1'b1) );
@@ -334,7 +334,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_rand_addr_gen_max_burstcount_check ( .error(1'b1) );
@@ -343,7 +343,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_rand_seq_addr_gen_min_burstcount_check ( .error(1'b1) );
@@ -352,7 +352,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_rand_seq_addr_gen_max_burstcount_check ( .error(1'b1) );
@@ -361,7 +361,7 @@ module ddr2_traffic_gen_mm_traffic_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					tg_rand_seq_addr_gen_rand_addr_percent_check ( .error(1'b1) );

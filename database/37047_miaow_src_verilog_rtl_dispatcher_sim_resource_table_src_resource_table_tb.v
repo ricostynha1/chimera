@@ -160,7 +160,7 @@ module resource_table_tb ();
       @(posedge res_table_done);
       @(posedge clk);
       
-      $stop;
+      $finish;
       
       // Allocate some
 

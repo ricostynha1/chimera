@@ -66,7 +66,7 @@ always @(posedge clk) aux2 <= cen_snd;
 always @* begin
     if( aux2 && cen_mcu ) begin
         $display("Tri RAM clash possible");
-        $stop;
+        $finish;
     end
 end
 `endif

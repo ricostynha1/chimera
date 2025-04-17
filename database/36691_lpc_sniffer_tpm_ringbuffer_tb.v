@@ -43,15 +43,15 @@ module ringbuffer_tb ();
 		#6
 		if (read_data != 0) begin
 			$display("After reset read_data != 0");
-			$stop;
+			$finish;
 		end
 		if (~empty) begin
 			$display("Ringbuffer is not empty after reset");
-			$stop;
+			$finish;
 		end
 		if (overflow) begin
 			$display("Ringbuffer is overflowed after reset");
-			$stop;
+			$finish;
 		end
 
 		// try to read even if the buffer is empty
@@ -62,7 +62,7 @@ module ringbuffer_tb ();
 		#1;
 		if (read_data != 0) begin
 			$display("read_data increase even the ringbuffer is empty and a malicious read_clock_enable was triggered");
-			$stop;
+			$finish;
 		end
 		
 		// check write, read, write, write, write,read, read, write, read, read
@@ -73,18 +73,18 @@ module ringbuffer_tb ();
 		#1;
 		if (empty || overflow) begin
 			$display("buffer should not empty nor overflowed");
-			$stop;
+			$finish;
 		end
 		#2;
 		read_clock_enable = 1;
 		#2;
 		if (~empty) begin
 			$display("buffer is empty, but not signaling emptyness");
-			$stop;
+			$finish;
 		end
 		if (read_data != 2'b11) begin
 			$display("read_data doesn\'t increase after read");
-			$stop;
+			$finish;
 		end
 		#2;
 		read_clock_enable = 0;
@@ -105,7 +105,7 @@ module ringbuffer_tb ();
 		write_clock_enable = 0;
 		if (~overflow) begin
 			$display("overflow not signaled even it\'s full");
-			$stop;
+			$finish;
 		end
 		#2;
 		read_clock_enable = 1;
@@ -113,7 +113,7 @@ module ringbuffer_tb ();
 		read_clock_enable = 0;
 		if (overflow) begin
 			$display("overflow should *NOT* signaled anymore");
-			$stop;
+			$finish;
 		end
 		#2;
 		read_clock_enable = 1;
@@ -129,7 +129,7 @@ module ringbuffer_tb ();
 		read_clock_enable = 0;
 		if (~empty) begin
 			$display("buffer should empty, but it doesn\'t signaling this");
-			$stop;
+			$finish;
 		end
 		#2;
 		$finish;

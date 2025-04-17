@@ -31,7 +31,7 @@ module tb();
      	#40 get = 1'b0;
 		#40 get = 1'b1;in = 8'b11111111;
 		#40 get = 1'b0;
-        #1000 $stop;
+        #1000 $finish;
 
     end
 endmodule

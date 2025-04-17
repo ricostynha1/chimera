@@ -492,7 +492,7 @@ end
 always @(negedge CLK) begin
 	if ( ic_iq_valid ) begin
 		if ( (ic_iq_pc>>3) != ic_iq_instr ) begin
-			$stop;
+			$finish;
 		end
 	end
 

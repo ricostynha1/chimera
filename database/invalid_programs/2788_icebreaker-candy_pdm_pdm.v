@@ -20,7 +20,7 @@ module top_tb();
         slow_clk = 1;
         reset = 1;
         #16 reset = 0;
-        #400 $stop;
+        #400 $finish;
     end
 
     always

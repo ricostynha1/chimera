@@ -14,7 +14,7 @@ gpio_ctrl gpio_ctrl(.state(state), .GPIO0_D(GPIO0_D));
 initial begin
      state = 1'b0;
 #100 state = 1'b1;
-#100 $stop;
+#100 $finish;
 end
 
 endmodule

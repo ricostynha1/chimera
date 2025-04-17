@@ -320,20 +320,20 @@ module ddr2_example_top_tb ();
             begin
                 $write($time);
                 $write("          --- SIMULATION PASSED --- ");
-                $stop;
+                $finish;
             end
             else
             begin
                 $write($time);
                 $write("          --- SIMULATION FAILED --- ");
-                $stop;
+                $finish;
             end
         end
         else
         begin
             $write($time);
             $write("          --- SIMULATION FAILED, DID NOT COMPLETE --- ");
-            $stop;
+            $finish;
         end
     end
 

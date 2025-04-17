@@ -295,7 +295,7 @@ module ip_checksum_ttl
                if (checksum_done && checksum[19:16] != 4'h0) begin
                   $display("%t %m ERROR: top 4 bits of checksum_word_0 not zero - algo wrong???",
                            $time);
-                  #100 $stop;
+                  #100 $finish;
                end
                // synthesis translate_on
 
@@ -367,7 +367,7 @@ module ip_checksum_ttl
                if (checksum_done && checksum[19:16] != 4'h0) begin
                   $display("%t %m ERROR: top 4 bits of checksum_word_0 not zero - algo wrong???",
                            $time);
-                  #100 $stop;
+                  #100 $finish;
                end
                // synthesis translate_on
 

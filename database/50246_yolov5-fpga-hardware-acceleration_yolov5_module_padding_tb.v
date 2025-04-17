@@ -39,7 +39,7 @@ initial begin
     #100
     for(i=0;i<K*(W+4)*(H+4);i=i+1)
     $display("%b",out1[i*DATA_WIDTH+:DATA_WIDTH]);
-    $stop;
+    $finish;
 end
 padding#(.K(K),.W(W),.H(H)) p (x,out);
 padding#(.K(K),.W(W+2),.H(H+2)) p1(out,out1);

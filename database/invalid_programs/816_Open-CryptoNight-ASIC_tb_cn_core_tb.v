@@ -121,7 +121,7 @@ end
 $fclose(fileno);
 if (!found) begin
   $display("%0d  read_vector: vector line not found: '%0s'", $stime, command);
-  $stop;
+  $finish;
 end
 
 read_vector = hexval;
@@ -275,7 +275,7 @@ initial begin : test_script
     $display("Failed: %0d", Nfail);
     $display;
     $display;
-    $stop;
+    $finish;
   end
 
 end

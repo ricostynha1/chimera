@@ -35,7 +35,7 @@ module uart_test_tb;
           rst_n = 1;        
 		// Add stimulus here
 		#20000;
-      //  $stop;
+      //  $finish;
 	 end
    
     always #10 clk = ~ clk;          //20ns一个周期，产生50MHz时钟源

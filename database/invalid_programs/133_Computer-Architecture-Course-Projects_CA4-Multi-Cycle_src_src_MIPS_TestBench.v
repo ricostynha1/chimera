@@ -15,7 +15,7 @@ module TestBench ();
   initial begin
 	#5;
     #`clock_dur rst = 1'b0;
-    #(`clock_dur * 10000) $stop;
+    #(`clock_dur * 10000) $finish;
   end
 
   always begin

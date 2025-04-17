@@ -550,7 +550,7 @@ module compression_hdl_lowpower_tb
         # (50);
         clk <= 1'b0;
         # (50);
-        $stop;
+        $finish;
       end
     end
 

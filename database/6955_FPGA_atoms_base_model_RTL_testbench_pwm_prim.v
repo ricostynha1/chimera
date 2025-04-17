@@ -75,7 +75,7 @@ initial begin
     i_times <= 1000;
 
     #100_000;
-    $stop;
+    $finish;
 end
 
 

@@ -72,7 +72,7 @@ module fifo_test_vector #(parameter W=4,B=8)
 		rd_wr(25); //16
 		rd_wr(26); //17
 		rd_wr(27); //18
-		$stop;
+		$finish;
 	 end
 	 
 	 task initialize(); begin

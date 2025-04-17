@@ -31,7 +31,7 @@ always begin
       if (pc > 32'h00000500) // set to the address of the last instruction
        begin
 
-         $stop;
+         $finish;
        end
    end  
 end //end always

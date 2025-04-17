@@ -19,6 +19,6 @@ initial forever #450 rst<= ~rst;
 
 initial forever #400 in<= ~in;
 
-initial #6000 $stop;
+initial #6000 $finish;
 
 endmodule

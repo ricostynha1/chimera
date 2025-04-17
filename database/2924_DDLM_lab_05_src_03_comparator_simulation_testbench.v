@@ -27,7 +27,7 @@ module testbench;
         x = 0;
         y = 0;
         #8
-        $stop;
+        $finish;
     end
     
     initial

@@ -34,7 +34,7 @@ numB <= 16'b0010101100011110;
 #20 numA <= 16'b0001010001001000;
 numB <= 16'b1100001101100111;
 #20
-$stop;
+$finish;
 end
 floatADivB16 a ( numA,
            numB,

@@ -166,7 +166,7 @@ module tb_axi4l_to_wishbone();
             if ( axi4l_rvalid && axi4l_rready ) begin
                 if ( axi4l_rdata != exp_rdata ) begin
                     $display("read error!");
-                    $stop();
+                    $finish();
                 end
                 exp_rdata <= exp_rdata + 1;
             end

@@ -29,7 +29,7 @@ initial begin
     #500;
     rst <= 1'b1;
     #40000;
-    $stop;
+    $finish;
 end
 
 GTP_GRS GRS_INST(

@@ -311,7 +311,7 @@ always begin
       waitclock;
   end
   
-  $stop;
+  $finish;
       
 end  
 

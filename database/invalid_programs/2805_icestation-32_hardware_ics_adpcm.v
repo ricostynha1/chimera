@@ -944,7 +944,7 @@ module ics_adpcm #(
             default: begin
 `ifndef SYNTHESIS
                 $display("ADPCM DSP: Unhandled state");
-                $stop;
+                $finish;
 `endif
             end
         endcase

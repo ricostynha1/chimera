@@ -75,7 +75,7 @@ module TB_SPI_MasSlv;
         end
     end
 // to end simulation
-	initial #10000 $stop;
+	initial #10000 $finish;
 
 //uut MASTER instantiation
     spi_master MAS (

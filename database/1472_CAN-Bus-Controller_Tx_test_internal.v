@@ -75,7 +75,7 @@ module Tx_test_internal;
 		#10;
 		send_data = 1;
 		clear_to_tx = 1;
-		#300000 $stop;
+		#300000 $finish;
 		// Add stimulus here
 
 	end

@@ -2535,7 +2535,7 @@ endtask
         if (test_done == 1) begin
       #5000
       $display ("%m at time %t: Simulation is Complete", $realtime);
-            $stop(0);
+            $finish(0);
             $finish;
         end
     end
@@ -2552,7 +2552,7 @@ begin
 	if (DEADMAN_TIMER == DEADMAN_LIMIT)
 	begin
 	    $display ("SWM: No Activity in %d Clocks.  Deadman Timer at time %t!!", DEADMAN_TIMER, $time);    
-	    $stop();
+	    $finish();
 	end
 end
 

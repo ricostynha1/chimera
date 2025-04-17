@@ -68,7 +68,7 @@ module t_sqrt_generic();
     end
 
     if (radicand_d >= (1 << WIDTH_INPUT) - 1) begin
-      $stop;
+      $finish;
     end
 
     // Reset case

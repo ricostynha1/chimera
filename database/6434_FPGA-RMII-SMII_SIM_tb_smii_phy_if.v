@@ -198,7 +198,7 @@ initial begin
         end
     join
     repeat(100) @ (posedge phy_smii_ref_clk);
-    $stop;
+    $finish;
 end
 
 endmodule

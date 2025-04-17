@@ -156,7 +156,7 @@ module testbench_1();
 		if (DEBUG_ADDR == 24'hC18F74)
 		begin
 			$display("Going to BIOS menu !");
-			$stop;
+			$finish;
 		end
 		
 		if (DEBUG_ADDR == 24'hC11002) $display("Reset procedure !");
@@ -196,26 +196,26 @@ module testbench_1();
 			else if (NG.M68KCPU.REG_D6 == 15'h0008)
 				$display("8 Z80 ERROR !");*/
 			$display("Self-test fail ! Check 68K D6 for error code.");
-			$stop;
+			$finish;
 		end
 		
 		if (DEBUG_ADDR == 24'hC12038)
 		begin
 			// Disabled to let the patched SP-S2.SP1 work
 			//$display("Z80 ERROR !");
-			//$stop;
+			//$finish;
 		end
 		
 		if (DEBUG_ADDR == 24'hC11D46)
 		begin
 			$display("SYSTEM ROM ERROR !");
-			$stop;
+			$finish;
 		end
 		
 		if (DEBUG_ADDR == 24'hC11D8C)
 		begin
 			$display("CALENDAR ERROR ! (B)");
-			$stop;
+			$finish;
 		end
 		
 		if (DEBUG_ADDR == 24'hC17E26) $display("Going to eye-catcher !");

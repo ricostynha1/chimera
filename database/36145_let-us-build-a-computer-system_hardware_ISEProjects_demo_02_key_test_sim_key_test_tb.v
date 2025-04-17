@@ -15,7 +15,7 @@ begin
 	#8   key[0] = 1'b1;
 	#16  key[0] = 1'b0;
 	#100
-	$stop;
+	$finish;
 end
 always#10 clk = ~clk;//50Mhz
 

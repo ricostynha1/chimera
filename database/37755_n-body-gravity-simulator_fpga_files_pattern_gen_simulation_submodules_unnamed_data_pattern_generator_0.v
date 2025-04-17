@@ -39,7 +39,7 @@ module unnamed_data_pattern_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					st_data_w_check ( .error(1'b1) );
@@ -48,7 +48,7 @@ module unnamed_data_pattern_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					bypass_enabled_check ( .error(1'b1) );
@@ -57,7 +57,7 @@ module unnamed_data_pattern_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					avalon_enabled_check ( .error(1'b1) );
@@ -66,7 +66,7 @@ module unnamed_data_pattern_generator_0 #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					cross_clk_sync_depth_check ( .error(1'b1) );

@@ -64,7 +64,7 @@ module cxapbasyncbridge_cdc_comb_and (q, d_async, valid);
   always @(posedge z_detect)
      begin
           $display("FATAL : Unsafe operation detected across CDC boundary");
-          $stop;
+          $finish;
      end
 
 `endif

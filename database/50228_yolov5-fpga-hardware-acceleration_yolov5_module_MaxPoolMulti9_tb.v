@@ -49,7 +49,7 @@ reset = 1;
 
 #200
 
-$stop;
+$finish;
 end
 MaxPoolMulti9 UUT (clk, reset, mpInput, mpOutput);
 endmodule

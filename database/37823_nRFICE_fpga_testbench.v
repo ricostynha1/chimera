@@ -197,7 +197,7 @@ begin
    
     #endTime; // wait for period 
     
-    $stop;   // end of simulation
+    $finish;   // end of simulation
 end
 
 

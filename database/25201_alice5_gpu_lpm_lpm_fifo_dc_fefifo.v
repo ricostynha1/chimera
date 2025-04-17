@@ -75,7 +75,7 @@ module lpm_fifo_dc_fefifo ( usedw_in,
         begin
             $display ("Error! LPM_MODE must be READ or WRITE.");
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
 
         i_overflow_checking = eva.GET_PARAMETER_VALUE(lpm_hint, "OVERFLOW_CHECKING");
@@ -85,7 +85,7 @@ module lpm_fifo_dc_fefifo ( usedw_in,
             begin
                 $display ("Error! OVERFLOW_CHECKING must equal to either 'ON' or 'OFF'");
                 $display("Time: %0t  Instance: %m", $time);
-                $stop;
+                $finish;
             end
             else
                 i_overflow_checking = overflow_checking;
@@ -94,7 +94,7 @@ module lpm_fifo_dc_fefifo ( usedw_in,
         begin
             $display ("Error! OVERFLOW_CHECKING must equal to either 'ON' or 'OFF'");
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
 
         i_underflow_checking = eva.GET_PARAMETER_VALUE(lpm_hint, "UNDERFLOW_CHECKING");
@@ -104,7 +104,7 @@ module lpm_fifo_dc_fefifo ( usedw_in,
             begin
                 $display ("Error! UNDERFLOW_CHECKING must equal to either 'ON' or 'OFF'");
                 $display("Time: %0t  Instance: %m", $time);
-                $stop;
+                $finish;
             end
             else
                 i_underflow_checking = underflow_checking;
@@ -113,7 +113,7 @@ module lpm_fifo_dc_fefifo ( usedw_in,
         begin
             $display ("Error! UNDERFLOW_CHECKING must equal to either 'ON' or 'OFF'");
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
 
         sm_empty <= 2'b00;

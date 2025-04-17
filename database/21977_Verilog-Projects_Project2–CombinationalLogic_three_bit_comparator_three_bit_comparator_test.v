@@ -52,6 +52,6 @@ module three_bit_comparator_test;
     // Loops over the possible combinations for A and B
     for (count = 0; count < 64; count = count + 1)
       #1 {A, B} = count;
-      #5 $stop;
+      #5 $finish;
     end
 endmodule

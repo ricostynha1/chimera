@@ -317,7 +317,7 @@ always begin
 	waitclock;
 	$display("Result: hit=%b dat=%x", dcb_hit, dcb_dat);
 	
-	$stop;
+	$finish;
 end
 
 

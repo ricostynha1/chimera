@@ -101,7 +101,7 @@ if ( ram_wr_en_xdata )
     if (( ram_wr_addr[6:0]==8'h7f ) & ram_wr_byte[0] ) begin
 	    repeat(1000) @ (posedge clk);
 		$display("Test over, simulation is OK!");
-		$stop(1);
+		$finish(1);
 		end
 	else
         xdata[ram_wr_addr[6:0]] <=  ram_wr_byte;
@@ -124,7 +124,7 @@ if ( ram_rd_en_sfr )
 	else
     begin
         $display($time," ns : --- SFR READ: %2h---",ram_rd_addr[7:0]);
-        //$stop;
+        //$finish;
     end
 else;	
 
@@ -135,7 +135,7 @@ if ( ram_wr_en_sfr )
     else	
     begin
     $display($time," ns : --- SFR WRITE: %2h -> %2h---",ram_wr_addr[7:0],ram_wr_byte);
-    //$stop;
+    //$finish;
     end
 else;	
 

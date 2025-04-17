@@ -85,7 +85,7 @@ always @ (posedge clk or negedge rstn)
 
 generate if (SIMULATION) begin
 always @ (posedge clk)
-    if (i_en & i_eos & ~i_eob) begin  $display("*** error : meet i_eos=1 but i_eob=0");  $stop;  end
+    if (i_en & i_eos & ~i_eob) begin  $display("*** error : meet i_eos=1 but i_eob=0");  $finish;  end
 end endgenerate
 
 
@@ -171,7 +171,7 @@ always @ (posedge clk)
     if (a_pipe_en) begin
         if (~c_en | c_eob) begin
         end else begin
-            if (c_ptr == 14'h3fff) begin  $display("*** error : block length overflow 16384, previous module must be wrong!");  $stop;  end
+            if (c_ptr == 14'h3fff) begin  $display("*** error : block length overflow 16384, previous module must be wrong!");  $finish;  end
         end
     end
 end endgenerate
@@ -331,7 +331,7 @@ always @ (posedge clk or negedge rstn)
 generate if (SIMULATION) begin
 always @ (posedge clk)
     if (a_pipe_en) begin
-        if (f_match & ~e_en) begin $display("*** error: meeting e_en=0 when running, something must be wrong!");  $stop;  end
+        if (f_match & ~e_en) begin $display("*** error: meeting e_en=0 when running, something must be wrong!");  $finish;  end
     end
 end endgenerate
 
@@ -375,11 +375,11 @@ generate if (SIMULATION) begin
 always @ (posedge clk)
     if (a_pipe_en) begin
         if (~f_match) begin
-            if (f_en) if (f_match_start === 1'bz) begin $display("***error : f_match_start not sure when f_en=1"); $stop; end
+            if (f_en) if (f_match_start === 1'bz) begin $display("***error : f_match_start not sure when f_en=1"); $finish; end
         end else if (f_match_final) begin
         end else begin
-            if ( (g_lz_len == 9'd2) !== f_match_just_started ) begin $display("***error : (g_lz_len == 9'd2) !== f_match_just_started"); $stop; end
-            if ( (g_lz_len == 9'd2) && e_eob                 ) begin $display("***error : (g_lz_len == 9'd2) && e_eob"); $stop; end
+            if ( (g_lz_len == 9'd2) !== f_match_just_started ) begin $display("***error : (g_lz_len == 9'd2) !== f_match_just_started"); $finish; end
+            if ( (g_lz_len == 9'd2) && e_eob                 ) begin $display("***error : (g_lz_len == 9'd2) && e_eob"); $finish; end
         end
     end
 end endgenerate
@@ -511,13 +511,13 @@ always @ (posedge clk)
     if (a_pipe_en) begin
         if (~k_during_stream) begin
         end else begin
-            if (j_eos  & ~j_nlz_en) begin $display("*** error : j_eos=1 but j_nlz_en=0 at the last byte of stream, something must be wrong!"); $stop; end
-            if (g_lz_en & j_nlz_en) begin $display("*** error : g_lz_en=1 and j_nlz_en=1 at same time, something must be wrong!"); $stop; end
-            if (g_lz_en & j_eos   ) begin $display("*** error : g_lz_en=1 and j_eos=1    at same time, something must be wrong!"); $stop; end
-            if (g_lz_en & j_eob   ) begin $display("*** error : g_lz_en=1 and j_eob=1    at same time, something must be wrong!"); $stop; end
-            if (g_lz_en & g_lz_len < 9'd3        ) begin $display("*** error : g_lz_len < 3"); $stop; end
-            if (g_lz_en & g_lz_len > MAX_LZ77_LEN) begin $display("*** error : g_lz_len > MAX_LZ77_LEN"); $stop; end
-            if (g_lz_en & g_lz_dist < 14'd1      ) begin $display("*** error : g_lz_dist < 1"); $stop; end
+            if (j_eos  & ~j_nlz_en) begin $display("*** error : j_eos=1 but j_nlz_en=0 at the last byte of stream, something must be wrong!"); $finish; end
+            if (g_lz_en & j_nlz_en) begin $display("*** error : g_lz_en=1 and j_nlz_en=1 at same time, something must be wrong!"); $finish; end
+            if (g_lz_en & j_eos   ) begin $display("*** error : g_lz_en=1 and j_eos=1    at same time, something must be wrong!"); $finish; end
+            if (g_lz_en & j_eob   ) begin $display("*** error : g_lz_en=1 and j_eob=1    at same time, something must be wrong!"); $finish; end
+            if (g_lz_en & g_lz_len < 9'd3        ) begin $display("*** error : g_lz_len < 3"); $finish; end
+            if (g_lz_en & g_lz_len > MAX_LZ77_LEN) begin $display("*** error : g_lz_len > MAX_LZ77_LEN"); $finish; end
+            if (g_lz_en & g_lz_dist < 14'd1      ) begin $display("*** error : g_lz_dist < 1"); $finish; end
         end
     end
 end endgenerate

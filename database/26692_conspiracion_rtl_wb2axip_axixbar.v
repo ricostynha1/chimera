@@ -2158,12 +2158,12 @@ module	axixbar #(
 	initial begin
 		if (NM == 0) begin
                         $display("At least one master must be defined");
-                        $stop;
+                        $finish;
                 end
 
 		if (NS == 0) begin
                         $display("At least one slave must be defined");
-                        $stop;
+                        $finish;
                 end
         end
 	// }}}

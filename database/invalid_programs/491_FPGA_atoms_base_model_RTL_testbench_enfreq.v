@@ -45,7 +45,7 @@ initial begin
 
     #10_000;
 
-    $stop;
+    $finish;
 end
 
 endmodule

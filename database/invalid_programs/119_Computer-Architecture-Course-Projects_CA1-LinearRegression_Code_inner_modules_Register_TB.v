@@ -28,7 +28,7 @@ module Register_TB ();
     #(`clock_dur * 1 * 2) rst = 1'b0;
     #(`clock_dur * 1 * 2) load_en = 1'b1;
     par_in = 8'd17;
-    #(`clock_dur * 3 * 2) $stop;
+    #(`clock_dur * 3 * 2) $finish;
   end
 
 endmodule

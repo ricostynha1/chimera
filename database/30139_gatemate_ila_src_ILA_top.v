@@ -48,9 +48,9 @@ module ila_top#(
     output o_miso_ILA,
 // #################################################################################################
 // # ********************************************************************************************* #
-// __Place~for~Signals~start__
-input clk,
-output [3:0] led,
+// __Place~for~Signals~start__
+input clk,
+output [3:0] led,
 // __Place~for~Signals~ends__
 // #################################################################################################
     // test Signals,
@@ -68,8 +68,8 @@ wire reset_DUT;
 wire ILA_clk_src;
 // #################################################################################################
 // # ********************************************************************************************* #
-// __Place~for~SUT~start__
-blink_4 DUT (.ILA_rst(reset_DUT), .ila_clk_src(ILA_clk_src), .clk(clk), .led(led), .ila_sample_dut(sample));
+// __Place~for~SUT~start__
+blink_4 DUT (.ILA_rst(reset_DUT), .ila_clk_src(ILA_clk_src), .clk(clk), .led(led), .ila_sample_dut(sample));
 // __Place~for~SUT~ends__
 // #################################################################################################
 //blink DUT ( .clk(i_clk), .rst(rst), .led(led), .ila_sample_dut(sample));

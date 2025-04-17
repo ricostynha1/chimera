@@ -40,7 +40,7 @@ module uart_tx_tb ();
 		#10
 		if (ready == 'b1) begin
 			$display("ready in reset is high. Expected: low");
-			$stop;
+			$finish;
 		end
 		#2
 		read_clock_enable = 0;
@@ -52,7 +52,7 @@ module uart_tx_tb ();
 		#500;
 		if (ready == 'b0) begin
 			$display("ready after reset is low. Expected: high");
-			$stop;
+			$finish;
 		end
 		#2;
 		read_clock_enable = 1;

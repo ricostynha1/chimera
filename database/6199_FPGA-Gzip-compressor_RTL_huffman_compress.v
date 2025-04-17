@@ -300,7 +300,7 @@ always @ (posedge clk)
 
 generate if (SIMULATION) begin
 always @ (posedge clk)
-    if (i_symbol_en && i_eob && wtype != T_SYMBOL) begin $display("wtype != T_SYMBOL when EOB"); $stop; end
+    if (i_symbol_en && i_eob && wtype != T_SYMBOL) begin $display("wtype != T_SYMBOL when EOB"); $finish; end
 end endgenerate
 
 
@@ -338,13 +338,13 @@ always @ (posedge clk or negedge rstn)
 
 generate if (SIMULATION) begin
 always @ (posedge clk) begin
-    if (~w_wait_huffman) if (huffman_st | symb_huffman_en | dist_huffman_en | huffman_ed) begin $display("***error : huffman_st=1 | symb_huffman_en=1 | dist_huffman_en=1 | huffman_ed=1 when w_wait_huffman=0"); $stop; end
-    if (huffman_st      & symb_huffman_en) begin $display("***error : huffman_st==1     , symb_huffman_en==1 simutinously"); $stop; end
-    if (huffman_st      & dist_huffman_en) begin $display("***error : huffman_st==1     , dist_huffman_en==1 simutinously"); $stop; end
-    if (huffman_st      & huffman_ed     ) begin $display("***error : huffman_st==1     , huffman_ed==1      simutinously"); $stop; end
-    if (symb_huffman_en & dist_huffman_en) begin $display("***error : symb_huffman_en==1, dist_huffman_en==1 simutinously"); $stop; end
-    if (symb_huffman_en & huffman_ed     ) begin $display("***error : symb_huffman_en==1, huffman_ed==1      simutinously"); $stop; end
-    if (dist_huffman_en & huffman_ed     ) begin $display("***error : dist_huffman_en==1, huffman_ed==1      simutinously"); $stop; end
+    if (~w_wait_huffman) if (huffman_st | symb_huffman_en | dist_huffman_en | huffman_ed) begin $display("***error : huffman_st=1 | symb_huffman_en=1 | dist_huffman_en=1 | huffman_ed=1 when w_wait_huffman=0"); $finish; end
+    if (huffman_st      & symb_huffman_en) begin $display("***error : huffman_st==1     , symb_huffman_en==1 simutinously"); $finish; end
+    if (huffman_st      & dist_huffman_en) begin $display("***error : huffman_st==1     , dist_huffman_en==1 simutinously"); $finish; end
+    if (huffman_st      & huffman_ed     ) begin $display("***error : huffman_st==1     , huffman_ed==1      simutinously"); $finish; end
+    if (symb_huffman_en & dist_huffman_en) begin $display("***error : symb_huffman_en==1, dist_huffman_en==1 simutinously"); $finish; end
+    if (symb_huffman_en & huffman_ed     ) begin $display("***error : symb_huffman_en==1, huffman_ed==1      simutinously"); $finish; end
+    if (dist_huffman_en & huffman_ed     ) begin $display("***error : dist_huffman_en==1, huffman_ed==1      simutinously"); $finish; end
 end
 end endgenerate
 
@@ -441,7 +441,7 @@ always @ (posedge clk)
 generate if (SIMULATION) begin
 always @ (posedge clk)
     if (r_state == R_DYN_OUTTREE)
-        if ( 8'd1 > rptr_aux_huffman_offset || rptr_aux_huffman_offset > 8'd172 ) begin $display("*** error : buffer_aux_huffman address out of range"); $stop; end
+        if ( 8'd1 > rptr_aux_huffman_offset || rptr_aux_huffman_offset > 8'd172 ) begin $display("*** error : buffer_aux_huffman address out of range"); $finish; end
 end endgenerate
 
 
@@ -710,23 +710,23 @@ wire r_l_eos = r_l_data[10] && (r_l_type == T_SYMBOL);
 wire r_h_eos = r_h_data[10] && (r_h_type == T_SYMBOL);
 always @ (posedge clk) begin
     if (r_state == R_IDLE) begin
-        if (rptr[ 3:0]              !== 4'd0     ) begin $display("rptr[3:0] != 0                at r_state == R_IDLE"); $stop; end
-        if (rptr[14:4]              !== rptr_base) begin $display("rptr[14:4] != rptr_base       at r_state == R_IDLE"); $stop; end
-        if (rptr_huffman_offset     !== 8'h0     ) begin $display("rptr_huffman_offset     !== 0 at r_state == R_IDLE"); $stop; end
-        if (rptr_aux_huffman_offset !== 8'h0     ) begin $display("rptr_aux_huffman_offset !== 0 at r_state == R_IDLE"); $stop; end
+        if (rptr[ 3:0]              !== 4'd0     ) begin $display("rptr[3:0] != 0                at r_state == R_IDLE"); $finish; end
+        if (rptr[14:4]              !== rptr_base) begin $display("rptr[14:4] != rptr_base       at r_state == R_IDLE"); $finish; end
+        if (rptr_huffman_offset     !== 8'h0     ) begin $display("rptr_huffman_offset     !== 0 at r_state == R_IDLE"); $finish; end
+        if (rptr_aux_huffman_offset !== 8'h0     ) begin $display("rptr_aux_huffman_offset !== 0 at r_state == R_IDLE"); $finish; end
     end
     if (r_state == R_HUFFMAN_OUT) begin
-        if ( r_l_eos &&            ~s_finalblock) begin $display("*** error : meet EOS, but s_finalblock=0"); $stop; end
-        if ( r_h_eos &&            ~s_finalblock) begin $display("*** error : meet EOS, but s_finalblock=0"); $stop; end
-        if ( r_l_eob && ~r_l_eos && s_finalblock) begin $display("*** error : EOS=0, but s_finalblock=1"   ); $stop; end
-        if ( r_h_eob && ~r_h_eos && s_finalblock) begin $display("*** error : EOS=0, but s_finalblock=1"   ); $stop; end
+        if ( r_l_eos &&            ~s_finalblock) begin $display("*** error : meet EOS, but s_finalblock=0"); $finish; end
+        if ( r_h_eos &&            ~s_finalblock) begin $display("*** error : meet EOS, but s_finalblock=0"); $finish; end
+        if ( r_l_eob && ~r_l_eos && s_finalblock) begin $display("*** error : EOS=0, but s_finalblock=1"   ); $finish; end
+        if ( r_h_eob && ~r_h_eos && s_finalblock) begin $display("*** error : EOS=0, but s_finalblock=1"   ); $finish; end
     end
 end
 
 always @ (posedge clk or negedge rstn)
     if (~rstn) begin
     end else begin
-        if ( (rptr+14'd1) !== rptr_add1 ) begin $display("*** error : (rptr+14'd1) !== rptr_add1"); $stop; end
+        if ( (rptr+14'd1) !== rptr_add1 ) begin $display("*** error : (rptr+14'd1) !== rptr_add1"); $finish; end
     end
 end endgenerate
 
@@ -962,7 +962,7 @@ always @ (posedge clk or negedge rstn)
 generate if (SIMULATION) begin
 always @ (posedge clk)
     if (c_l_en | c_h_en)
-        if ( {2'h0, c_h_cnt} + {2'h0, c_h_ecnt} + {2'h0, c_l_cnt} + {2'h0, c_l_ecnt} > 6'd36 ) begin $display("*** error : bitc overflow"); $stop; end
+        if ( {2'h0, c_h_cnt} + {2'h0, c_h_ecnt} + {2'h0, c_l_cnt} + {2'h0, c_l_ecnt} > 6'd36 ) begin $display("*** error : bitc overflow"); $finish; end
 end endgenerate
 
 
@@ -1040,11 +1040,11 @@ always @ (posedge clk or negedge rstn)
                 t_bitc[6:3] = t_bitc[6:3] + 4'h1;
                 t_bitc[2:0] = 3'h0;
             end
-            if (t_bitc > 7'd32) begin $display("*** error : align overflow"); $stop; end
+            if (t_bitc > 7'd32) begin $display("*** error : align overflow"); $finish; end
         end else if (d_en) begin
             t_bitc = {1'b0,d_bitc } + t_bitc;
         end
-        if ( t_bitc > 7'd67 ) begin $display("*** error : rem_bitc + d_bitc overflow 67"); $stop; end
+        if ( t_bitc > 7'd67 ) begin $display("*** error : rem_bitc + d_bitc overflow 67"); $finish; end
     end
 end endgenerate
 
@@ -1099,7 +1099,7 @@ always @ (posedge clk) begin
         buffer_usage_max = buffer_usage + 16'd128;
         //$display("huffman_compress : buffer_usage = %5d bytes", buffer_usage);
     end
-    if ( buffer_usage >= THRESHOLD_OVERFLOW ) begin $display("*** error : buffer almost overflow"); $stop; end
+    if ( buffer_usage >= THRESHOLD_OVERFLOW ) begin $display("*** error : buffer almost overflow"); $finish; end
 end
 end endgenerate
 

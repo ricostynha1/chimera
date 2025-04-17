@@ -44,7 +44,7 @@ initial begin
 
     #10000;
     $fclose(wfile);
-    $stop;
+    $finish;
 end
 always #(CLK_PERIOD/2) clk=~clk;
 

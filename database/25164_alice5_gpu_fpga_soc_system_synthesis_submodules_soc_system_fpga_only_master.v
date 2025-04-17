@@ -72,7 +72,7 @@ module soc_system_fpga_only_master #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					use_pli_check ( .error(1'b1) );
@@ -81,7 +81,7 @@ module soc_system_fpga_only_master #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					pli_port_check ( .error(1'b1) );
@@ -90,7 +90,7 @@ module soc_system_fpga_only_master #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					fifo_depths_check ( .error(1'b1) );

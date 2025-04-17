@@ -2006,7 +2006,7 @@ module axi2axilsub #(
 		if (SLVDW < MSTDW)
 		begin
 			$fatal;		// Fatal elaboration error
-			$stop;		// Stop any simulation
+			$finish;		// Stop any simulation
 		end
 	end
 	// }}}

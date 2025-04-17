@@ -31,7 +31,7 @@ module testSAPone;
 		
 		
 		
-		#990 $stop;	
+		#990 $finish;	
 	end
 
 endmodule

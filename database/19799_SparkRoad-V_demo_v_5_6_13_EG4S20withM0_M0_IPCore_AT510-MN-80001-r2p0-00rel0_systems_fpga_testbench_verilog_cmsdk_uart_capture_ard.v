@@ -239,7 +239,7 @@ module cmsdk_uart_capture_ard (
     if (reg_end_simulation==1'b1)
       begin
       $write("%t UART: Test Ended\n",$time);
-      $stop;
+      $finish;
       end
 
   end

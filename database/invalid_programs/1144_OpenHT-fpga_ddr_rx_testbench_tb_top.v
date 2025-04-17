@@ -494,7 +494,7 @@ endgenerate
 always @ (posedge slow_clk_w) begin
     if(watchdog_r == {32{1'b1}}) begin
         $display("******  TEST IS TIMED OUT  ******\n");
-        $stop;
+        $finish;
         watchdog_r <= 0;
     end
     else begin
@@ -631,7 +631,7 @@ generate
                 $display(" ---------------------------------------------- ");
                 $display("\tERROR: Reset assertion fails: -- %0t fs", $time);
                 $display(" ---------------------------------------------- ");
-                $stop;
+                $finish;
             end
             else begin
             #1;
@@ -648,7 +648,7 @@ generate
                 $display(" ---------------------------------------------- ");
                 $display("\tERROR: Reset assertion fails: -- %0t fs", $time);
                 $display(" ---------------------------------------------- ");
-                $stop;
+                $finish;
             end
             else begin
             #1;
@@ -724,7 +724,7 @@ generate
                             $display(" ---------------------------------------------- ");
                             $display("\tERROR: DATA OVERFLOW FLAG TEST FAIL: -- %0t fs", $time);
                             $display(" ---------------------------------------------- ");
-                            $stop;
+                            $finish;
                         end
 						
 						move_cntr_r = move_cntr_r + 1;
@@ -800,7 +800,7 @@ generate
                        $display("******* TEST FAILED *******\n");
                     end
 					
-                    $stop;	
+                    $finish;	
                 end
 
                 else begin // RX, DYNAMIC, GEARING == X1
@@ -824,7 +824,7 @@ generate
                            $display(" ---------------------------------------------- ");
                            $display("\tERROR: DATA OVERFLOW FLAG TEST FAIL: -- %0t fs", $time);
                            $display(" ---------------------------------------------- ");
-                           $stop;
+                           $finish;
                         end
 						
 						move_cntr_r = move_cntr_r +1;
@@ -880,7 +880,7 @@ generate
                     $display("******* TEST FAILED *******\n");
                 end
 				
-                $stop;
+                $finish;
             end
             else begin       // RX, STATIC or BYPASS 
 			    if (GEARING != 1) begin //GEARING == X2/X4/X5
@@ -938,7 +938,7 @@ generate
                     $display("******* TEST FAILED *******\n");
                 end
 				
-                $stop;
+                $finish;
             end
         end
     end//RECEIVE
@@ -1006,7 +1006,7 @@ generate
                         $display(" ---------------------------------------------- ");
                         $display("\tERROR: DATA OVERFLOW FLAG TEST FAIL: -- %0t fs", $time);
                         $display(" ---------------------------------------------- ");
-                        $stop;
+                        $finish;
                     end
                 end
 
@@ -1073,7 +1073,7 @@ generate
                     $display("******* TEST FAILED *******\n");
                 end
 				
-                $stop;
+                $finish;
             end // TX DYANMIC
         else begin // TX STATIC
             for(c=0;c<32;c=c+1) begin
@@ -1124,7 +1124,7 @@ generate
                 $display("TIME = %t", $time) ;
                 $display("******* TEST FAILED *******\n");
             end
-            $stop;
+            $finish;
         end// TX STATIC
     end 
 end//TX
@@ -1856,7 +1856,7 @@ generate
                     $display(" ---------------------------------------------- ");
                     $display("\tERROR: DATA UNDERFLOW FLAG TEST FAIL: -- %0t fs", $time);
                     $display(" ---------------------------------------------- ");
-                    $stop;
+                    $finish;
                 end
             end
         end
@@ -1872,7 +1872,7 @@ generate
                     $display(" ---------------------------------------------- ");
                     $display("\tERROR: CLOCK UNDERFLOW FLAG TEST FAIL: -- %0t fs", $time);
                     $display(" ---------------------------------------------- ");
-                    $stop;
+                    $finish;
                 end
             end
         end

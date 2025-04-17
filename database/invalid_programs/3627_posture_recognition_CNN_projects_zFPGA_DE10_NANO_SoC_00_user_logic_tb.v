@@ -27,7 +27,7 @@ module tb;
 		#1000	KEY = 2'B11; //top_inst.SAA7121_reset_n = 0;
 		#200000	KEY = 2'B11; //top_inst.SAA7121_reset_n = 1;
 		
-		//#10		$stop;
+		//#10		$finish;
 		
 	end
 	

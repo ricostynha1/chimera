@@ -171,7 +171,7 @@ module PriorityResolver_tbFixedPriorities();
         
         end
 
-    $stop;
+    $finish;
     end
 
     /*

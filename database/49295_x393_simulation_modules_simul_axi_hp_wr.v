@@ -277,27 +277,27 @@ UPDATE: Xilinx docs say that (AR/AW)CACHE is ignored
         if (start_write_burst_r) begin
             if (awid_r != wid_out) begin
                 $display ("%m: at time %t ERROR: awid=%h, wid=%h",$time,awid_out,wid_out);
-                $stop;
+                $finish;
             end
         end
         if (start_write_burst_w) begin
             if (awsize_out != 2'h3) begin
                 $display ("%m: at time %t ERROR: awsize_out=%h, currently only 'h3 (8 bytes) is valid",$time,awsize_out);
-                $stop;
+                $finish;
             end
         end
         if (awvalid && awready) begin
             if (((awlock ^ VALID_AWLOCK) & VALID_AWLOCK_MASK) != 0) begin
                 $display ("%m: at time %t ERROR: awlock = %h, valid %h with mask %h",$time, awlock, VALID_AWLOCK, VALID_AWLOCK_MASK);
-                $stop;
+                $finish;
             end
             if (((awcache ^ VALID_AWCACHE) & VALID_AWCACHE_MASK) != 0) begin
                 $display ("%m: at time %t ERROR: awcache = %h, valid %h with mask %h",$time, awcache, VALID_AWCACHE, VALID_AWCACHE_MASK);
-                $stop;
+                $finish;
             end
             if (((awprot ^ VALID_AWPROT) & VALID_AWPROT_MASK) != 0) begin
                 $display ("%m: at time %t ERROR: awprot = %h, valid %h with mask %h",$time, awprot, VALID_AWPROT, VALID_AWPROT_MASK);
-                $stop;
+                $finish;
             end
         end
     end

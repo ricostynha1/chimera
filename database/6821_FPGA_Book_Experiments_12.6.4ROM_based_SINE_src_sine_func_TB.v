@@ -72,7 +72,7 @@ module sine_func_TB;
 		wait(counter==0);
 		@(negedge clk);
 		wait(counter==0);
-		$stop;
+		$finish;
 	end
       
 endmodule

@@ -62,7 +62,7 @@ module memory_tb;
         #110 mem_en = 0;
 
         // Stop simulation after some time
-        #120 $stop;
+        #120 $finish;
     end
 
     // Display read data

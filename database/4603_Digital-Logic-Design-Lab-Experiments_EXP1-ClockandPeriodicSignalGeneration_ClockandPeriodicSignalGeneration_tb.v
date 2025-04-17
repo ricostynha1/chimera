@@ -38,7 +38,7 @@ module tb1();
 		en = 1;
 		preset = 1;
 		#100000;
-		$stop;
+		$finish;
 	end
 endmodule
 
@@ -64,6 +64,6 @@ module tb2();
 		en = 1;
 		preset = 1;
 		#100000;
-		$stop;
+		$finish;
 	end
 endmodule

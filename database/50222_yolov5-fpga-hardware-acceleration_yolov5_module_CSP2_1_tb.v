@@ -107,7 +107,7 @@ cbs11_filters<=864'b001111110101110111101010100010100111010011000000011101011101
    # (PERIOD/2) reset<=1'b0;
    #(100*PERIOD)
     for(i=0;i<cbso_size;i=i+1) $display("%b ",out[i*DATA_WIDTH +: DATA_WIDTH]);
-    $stop;
+    $finish;
 end
 CSP2_1 UUT (clk,reset,x,cbs11_filters,cbs12_filters,cbs13_filters,cbs2_filters,cbso_filters,out);
 endmodule

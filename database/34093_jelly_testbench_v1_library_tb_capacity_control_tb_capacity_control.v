@@ -136,7 +136,7 @@ module tb_capacity_control();
                 end
                 else begin
                     $display("!!!!NG!!!!");
-                    $stop();
+                    $finish();
                 end
                 
                 if ( (i / 1000) < 3 ) begin

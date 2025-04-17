@@ -37,7 +37,7 @@ module testbench;
         shamt     = 0;
         operation = 0;
         #8;
-        $stop;
+        $finish;
     end
     
     initial

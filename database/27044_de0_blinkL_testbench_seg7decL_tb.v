@@ -14,7 +14,7 @@ initial begin
      en = 1'h0;
 #100 en = 1'b1;
 #100 en = 1'bx;
-#100 $stop;
+#100 $finish;
 end
 
 endmodule

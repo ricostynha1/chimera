@@ -523,7 +523,7 @@ $display("Invalid Parameter setting! When  EYE_TEST is set to TRUE, only WRITE c
 
 
 
-$stop;
+$finish;
 
 end
 
@@ -545,7 +545,7 @@ $display("Error ! Not supported test instruction mode in Spartan 6");
 
 
 
-$stop;
+$finish;
 
 end
 
@@ -575,7 +575,7 @@ $display("Change a smaller burst size");
 
 
 
-$stop;
+$finish;
 
 end
 
@@ -631,7 +631,7 @@ begin
 
   $display("Set value to 4'h8  for Psuedo PRBS");
 
-  $stop;
+  $finish;
 
 end
 
@@ -659,7 +659,7 @@ end
 
 //$display("Set the TST_MEM_INSTR_MODE = FIXED_INSTR_R_MODE and addr_mode to sequential mode");
 
-//$stop;
+//$finish;
 
 //end 
 
@@ -946,7 +946,7 @@ always @ (fix_bl_value)
 
      $display("decrease vio_fixed_bl_value or increase END Address range");
 
-     $stop;
+     $finish;
 
    end
 
@@ -972,7 +972,7 @@ always @ (vio_data_mode_value, vio_data_mask_gen)
 
      $display("Error ! Data Mask Generation only supported in Data Mode = Address as Data");
 
-     $stop;
+     $finish;
 
    end  
 

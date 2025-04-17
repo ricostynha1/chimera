@@ -52,7 +52,7 @@ module CoefficientCalc_TB ();
 
     if (coeff_ready) counter = (counter + 1'b1) % 8'd150;
 
-    if (coeff_done) $stop;
+    if (coeff_done) $finish;
     end
   end
 

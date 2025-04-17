@@ -12,7 +12,7 @@ module TC_Halt (clk, rst, en);
     always @ (negedge clk) begin
         if (en) begin
             $display("%s", HALT_MESSAGE);
-            $stop;
+            $finish;
         end
     end
 endmodule

@@ -131,7 +131,7 @@ initial
 					begin
 						$fclose(test_file);
 						$fclose(test_file1);
-						$stop;
+						$finish;
 					end
 			end   	
 	end

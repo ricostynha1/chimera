@@ -125,7 +125,7 @@ always @ (posedge rxclk or negedge rstn)
             $write("%02x ", rx_tdata);
             if (rx_tdata !== expect_byte) begin
                 $display("***error : RX data not increase");
-                $stop;
+                $finish;
             end
             expect_byte <= expect_byte + 8'h1;
         end

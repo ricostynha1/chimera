@@ -21,7 +21,7 @@ module counter_tb();
 
         #164000
         $display($time, " << Simulation Complete >>");
-        $stop;
+        $finish;
     end
 
     initial

@@ -100,7 +100,7 @@ module oled_performance_counters_tb;
     repeat (10000) @(posedge clk);
     for (i = 0; i < C_COUNTER_N; i = i + 1) begin
       show_pc_value(i);
-      if (|pc_i.r_pc[i]) $stop; // stop on error
+      if (|pc_i.r_pc[i]) $finish; // stop on error
     end
 
     $display("\nFINISHED - TEST PASSED");

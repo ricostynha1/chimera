@@ -55,7 +55,7 @@ module mem2serial_tb ();
 		// it should disable read_clock_enable
 		if (read_clock_enable == 'b1) begin
 			$display("read_clock_enable still high. Expected: low");
-			$stop;
+			$finish;
 		end
 
 		// ensure no data will read when uart_ready + empty

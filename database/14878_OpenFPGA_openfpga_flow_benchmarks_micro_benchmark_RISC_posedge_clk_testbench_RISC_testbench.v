@@ -28,7 +28,7 @@ RISC_core_mem_top top(Reg_R0_out,Reg_R1_out,Reg_R2_out,Reg_R3_out,bus_1_out,clk,
     begin
       clk=0;rst=1;
       #30 rst=0;
-      #6000 $stop;       
+      #6000 $finish;       
       end
 
 /* //----------

@@ -45,12 +45,12 @@ module TC_FileLoader (clk, rst, en, address, out);
         //fid = $fopen(hexfile, "rb");
         //if (fid == 0) begin
         //    $display("cannot open file");
-        //    $stop;
+        //    $finish;
         //end
         //fsize = $fseek(fid, 0, 2);
         //if (fsize == -1) begin
         //    $display("cannot move file pointer");
-        //    $stop;
+        //    $finish;
         //end
         //fsize = $ftell(fid);
         //$display("file is %0d bytes", fsize); 

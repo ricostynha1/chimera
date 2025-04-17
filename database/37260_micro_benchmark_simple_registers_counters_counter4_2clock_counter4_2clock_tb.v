@@ -38,7 +38,7 @@ module counter4_2clock_tb;
 
 	
 	initial begin
-		#5000 $stop;
+		#5000 $finish;
 	end
 
 endmodule

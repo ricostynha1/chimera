@@ -100,7 +100,7 @@ begin
 	key1 = ~key1;
 	#({$random} %10000000)
 	key1 = 1'b1;
-	#10 $stop;
+	#10 $finish;
 	
 end
 always#10 clk = ~clk;//50Mhz

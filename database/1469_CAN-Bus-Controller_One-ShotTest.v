@@ -54,7 +54,7 @@ module OneShotTest;
         rst = 0;
 		#10;
 		pulse = 1;
-		#100; $stop;
+		#100; $finish;
 		// Add stimulus here
 
 	end

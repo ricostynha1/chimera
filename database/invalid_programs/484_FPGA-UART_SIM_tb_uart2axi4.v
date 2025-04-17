@@ -100,7 +100,7 @@ initial begin
     @(posedge clk) en_to_dut   <= 1'b0;
     
     repeat (1000000) @(posedge clk);
-    $stop;
+    $finish;
 end
 
 

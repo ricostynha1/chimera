@@ -466,7 +466,7 @@ module jelly_dma_fifo_read
         if ( aresetn ) begin
             if ( busy & !fifo_ready ) begin
                 $display("FIFO overflow");
-                $stop();
+                $finish();
             end
         end
     end

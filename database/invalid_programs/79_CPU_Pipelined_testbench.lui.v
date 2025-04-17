@@ -78,7 +78,7 @@ CPU_Pipelined myCPU(.clk(clk), .reset(rst), .Strategy(BRANCH_PRED), .EXIR(EXIR),
              $display("Testing lui with immediate=1");
              verifyEqual32(myCPU.b2v_IDStage.b2v_MYRF.contents_t0, 65539);
           $display("CPU functional");
-          $stop;
+          $finish;
          end
         ///////////////////////////////////////////////////////////////////////////////////
 

@@ -145,39 +145,39 @@ module altera_tse_gxb_aligned_rxsync (
 	
 generate if ( DEVICE_FAMILY == "STRATIXIIGX" || DEVICE_FAMILY == "ARRIAGX" )
 begin          
-		always @ (posedge reset or posedge clk)
-		begin
-		 if (reset == 1'b1)
-			begin
-				altpcs_dataout              <= 8'h0;
-				altpcs_disperr              <= 1'b1;
-				altpcs_ctrldetect           <= 1'b0;
-				altpcs_errdetect            <= 1'b1;
-				altpcs_rmfifodatadeleted    <= 1'b0;
-				altpcs_rmfifodatainserted   <= 1'b0;
-			end
-		 else
-			begin
-			   if (alt_sync == 1'b1 )
-				 begin      
-					altpcs_dataout              <= alt_dataout_reg1;
-					altpcs_disperr              <= alt_disperr_reg1;
-					altpcs_ctrldetect           <= alt_ctrldetect_reg1;
-					altpcs_errdetect            <= alt_errdetect_reg1;
-					altpcs_rmfifodatadeleted    <= alt_rmfifodatadeleted_reg1;
-					altpcs_rmfifodatainserted   <= alt_rmfifodatainserted_reg1;
-				 end
-			   else
-				 begin
-					altpcs_dataout              <= 8'h0;
-					altpcs_disperr              <= 1'b1;
-					altpcs_ctrldetect           <= 1'b0;
-					altpcs_errdetect            <= 1'b1;
-					altpcs_rmfifodatadeleted    <= 1'b0;
-					altpcs_rmfifodatainserted   <= 1'b0;
-				 end
-			end
-		end
+		always @ (posedge reset or posedge clk)
+		begin
+		 if (reset == 1'b1)
+			begin
+				altpcs_dataout              <= 8'h0;
+				altpcs_disperr              <= 1'b1;
+				altpcs_ctrldetect           <= 1'b0;
+				altpcs_errdetect            <= 1'b1;
+				altpcs_rmfifodatadeleted    <= 1'b0;
+				altpcs_rmfifodatainserted   <= 1'b0;
+			end
+		 else
+			begin
+			   if (alt_sync == 1'b1 )
+				 begin      
+					altpcs_dataout              <= alt_dataout_reg1;
+					altpcs_disperr              <= alt_disperr_reg1;
+					altpcs_ctrldetect           <= alt_ctrldetect_reg1;
+					altpcs_errdetect            <= alt_errdetect_reg1;
+					altpcs_rmfifodatadeleted    <= alt_rmfifodatadeleted_reg1;
+					altpcs_rmfifodatainserted   <= alt_rmfifodatainserted_reg1;
+				 end
+			   else
+				 begin
+					altpcs_dataout              <= 8'h0;
+					altpcs_disperr              <= 1'b1;
+					altpcs_ctrldetect           <= 1'b0;
+					altpcs_errdetect            <= 1'b1;
+					altpcs_rmfifodatadeleted    <= 1'b0;
+					altpcs_rmfifodatainserted   <= 1'b0;
+				 end
+			end
+		end
 		assign altpcs_sync              = alt_sync_reg1;	      
 end
 else if ( DEVICE_FAMILY == "STRATIXIV" || DEVICE_FAMILY == "ARRIAIIGX" || DEVICE_FAMILY == "CYCLONEIVGX" || DEVICE_FAMILY == "HARDCOPYIV" || DEVICE_FAMILY == "ARRIAIIGZ"   || DEVICE_FAMILY == "STRATIXV" || DEVICE_FAMILY == "ARRIAV" || DEVICE_FAMILY == "ARRIAVGZ" || DEVICE_FAMILY == "CYCLONEV" || DEVICE_FAMILY == "ARRIA10")

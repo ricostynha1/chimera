@@ -55,7 +55,7 @@ module FinalTB();
 		UxRX = 1;
 		ABAUD = 0;
 		#500000000;
-		$stop;
+		$finish;
 	end
 
 endmodule

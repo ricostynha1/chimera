@@ -1717,7 +1717,7 @@ end
 
 //   $display("Error ! Not valid burst length");
 
-//   $stop;
+//   $finish;
 
 //   end
 

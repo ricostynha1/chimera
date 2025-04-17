@@ -103,7 +103,7 @@ initial begin
     
 
 
-    $stop; // End Simulation
+    $finish; // End Simulation
 end
 
 endmodule //PIC_TopModule_tb

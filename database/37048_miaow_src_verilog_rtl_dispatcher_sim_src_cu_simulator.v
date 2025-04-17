@@ -126,7 +126,7 @@ module cu_simulator (/*AUTOARG*/
       
 
       repeat(100) @(posedge clk);
-      $stop;
+      $finish;
       
    end // initial begin
    

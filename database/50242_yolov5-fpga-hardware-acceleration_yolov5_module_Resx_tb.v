@@ -80,7 +80,7 @@ x<=288'b001111111110000101001111010000100010110101100001101100001000111100111111
 # (100*PERIOD) 
         $display("four!");
         for(i=0;i<size2;i=i+1) $display("%b ",out[i*DATA_WIDTH +: DATA_WIDTH]);
-	$stop;
+	$finish;
 end
 
 

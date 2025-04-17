@@ -509,7 +509,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(W_wr_dst_reg) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/W_wr_dst_reg is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -523,7 +523,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(W_dst_regnum) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/W_dst_regnum is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -534,7 +534,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(W_valid) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/W_valid is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -548,7 +548,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(W_pcb) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/W_pcb is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -562,7 +562,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(W_iw) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/W_iw is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -573,7 +573,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(A_en) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/A_en is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -584,7 +584,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(E_valid) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/E_valid is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -595,7 +595,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(M_valid) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/M_valid is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -606,7 +606,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(A_valid) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/A_valid is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -630,7 +630,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(A_status_reg) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/A_status_reg is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -641,7 +641,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(A_estatus_reg) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/A_estatus_reg is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -652,7 +652,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(A_bstatus_reg) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/A_bstatus_reg is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -663,7 +663,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(i_read) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/i_read is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -677,7 +677,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(i_address) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/i_address is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -688,7 +688,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(i_readdatavalid) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/i_readdatavalid is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -699,7 +699,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(d_write) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/d_write is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -713,7 +713,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(d_byteenable) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/d_byteenable is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -727,7 +727,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(d_address) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/d_address is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -738,7 +738,7 @@ module DE0_NANO_SOC_QSYS_nios2_qsys_test_bench (
           if (^(d_read) === 1'bx)
             begin
               $write("%0d ns: ERROR: DE0_NANO_SOC_QSYS_nios2_qsys_test_bench/d_read is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 

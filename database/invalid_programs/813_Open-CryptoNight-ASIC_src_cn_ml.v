@@ -293,7 +293,7 @@ endfunction
   //  ----------------------------------------------------------------------------------------
 
   // always @(posedge clk) if (phase_x_write) $display("%0d  a: %h, b: %h", $stime, a, b);
-  // always @(posedge clk) if (phase_5_write) $stop;
+  // always @(posedge clk) if (phase_5_write) $finish;
 
   // Phases
 

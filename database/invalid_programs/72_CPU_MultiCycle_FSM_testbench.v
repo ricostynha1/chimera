@@ -70,7 +70,7 @@ task checkState;
    if (NS!==thestate)
    begin
       $display("Error: Op %d expected %b got %b\n", Op, thestate, NS);
-      $stop;
+      $finish;
    end
    end
 endtask

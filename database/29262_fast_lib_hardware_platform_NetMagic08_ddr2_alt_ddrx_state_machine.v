@@ -1573,7 +1573,7 @@ module alt_ddrx_state_machine
             else
             begin
                 //$write(" --- Error! MEM_IF_CS_WIDTH is greater that expected --- \n");
-                //$stop();
+                //$finish();
             end
 
         end

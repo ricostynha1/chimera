@@ -17,7 +17,7 @@ module inst_fetch_tb;
   initial begin
     rst = 1'b1;
     #195 rst= 1'b0;
-    #1000 $stop;
+    #1000 $finish;
   end
        
   inst_fetch inst_fetch0(

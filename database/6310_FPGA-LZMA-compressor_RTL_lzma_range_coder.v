@@ -749,7 +749,7 @@ always @ (posedge clk)
 
 //always @ (posedge clk)
 //    if (d_prob_wen & ~rc_busy)
-//        if (d_prob_wdata == 11'd0) begin $display("probability mustn't be zero"); $stop; end
+//        if (d_prob_wdata == 11'd0) begin $display("probability mustn't be zero"); $finish; end
 
 
 assign o_valid = e_valid;

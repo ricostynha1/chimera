@@ -47,7 +47,7 @@ module fibo_TB;
 			repeat(5) @(negedge clk);
 			$display("%d -> %d",i,fibo);
 		end
-		$stop;
+		$finish;
 
 	end
       

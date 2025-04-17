@@ -128,7 +128,7 @@ initial begin
 	$fclose(f_init);
 	
 	//#50000
-	//$stop();
+	//$finish();
 end
 
 always @(posedge clk) begin
@@ -138,7 +138,7 @@ always @(posedge clk) begin
 			$fclose(f_video);
 			$display("TB: Done");
 			#1000
-			$stop;
+			$finish;
 		end
 	end
 	
@@ -150,7 +150,7 @@ always @(posedge clk) begin
 			/*if (DUT.PLANES.k052109_1.ROW == 8'd10) begin
 				$fclose(f_video);
 				$display("TB: Done");
-				$stop;
+				$finish;
 			end*/
 		end
 	end

@@ -13,6 +13,6 @@ module tb();
 		#w;
 		en = 1;
 		#10000000;
-		$stop;
+		$finish;
 	end
 endmodule

@@ -22,7 +22,7 @@ sensor= 1'b0;
 #10 sensor= 1'b1;
 #50 sensor= 1'b0;
 #70 sensor= 1'b1;
-#60 $stop;
+#60 $finish;
 end
 
 endmodule

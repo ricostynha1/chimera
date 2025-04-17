@@ -21,7 +21,7 @@ module dcounter_tb();
 
         #1311220
         $display($time, " << Simulation Complete >>");
-        $stop;
+        $finish;
     end
 
     initial

@@ -109,7 +109,7 @@ localparam TERMINALPC=96;
                                myCPU.b2v_DM.memory[(address+4) >> 2]);
           end
           $display("CPU functional");
-          $stop;
+          $finish;
          end
         ///////////////////////////////////////////////////////////////////////////////////
    end

@@ -277,7 +277,7 @@ always @ (posedge clk or negedge rstn)
 // parameter checking
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
 initial begin
-    if (BAUD_CYCLES < 10) begin $error("invalid parameter : BAUD_CYCLES < 10, please use a faster driving clock"); $stop; end
+    if (BAUD_CYCLES < 10) begin $error("invalid parameter : BAUD_CYCLES < 10, please use a faster driving clock"); $finish; end
     
     $display("uart_rx :           parity = %s" , PARITY );
     $display("uart_rx :     clock period = %.0f ns   (%-10d Hz)" , 1000000000.0/CLK_FREQ  , CLK_FREQ );
@@ -329,7 +329,7 @@ generate genvar index;
                 relative_error_percent
             );
             
-            if ( relative_error_percent > 8.0 ) begin $error("relative_error is too large"); $stop; end   // if relative error larger than 8%
+            if ( relative_error_percent > 8.0 ) begin $error("relative_error is too large"); $finish; end   // if relative error larger than 8%
         end
     end
 endgenerate

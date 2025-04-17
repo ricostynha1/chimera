@@ -57,7 +57,7 @@ module Main_test;
 		#100;
 		#100 RESET = 0;
 		#1000 send_data = 1;
-		#100000 $stop;
+		#100000 $finish;
 		
         
 		// Add stimulus here

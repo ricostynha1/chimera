@@ -58,7 +58,7 @@ initial begin
 		#400
 		// checking if the output is 1
 	
-	$stop;
+	$finish;
 end
 
 Sigmoid UUT

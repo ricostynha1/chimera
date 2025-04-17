@@ -231,21 +231,21 @@ module  simul_axi_hp_rd #(
         if (start_read_burst_w) begin
             if (arsize_out != 2'h3) begin
                 $display ("%m: at time %t ERROR: arsize_out=%h, currently only 'h3 (8 bytes) is valid",$time,arsize_out);
-                $stop;
+                $finish;
             end
         end
         if (arvalid && arready) begin
             if (((arlock ^ VALID_ARLOCK) & VALID_ARLOCK_MASK) != 0) begin
                 $display ("%m: at time %t ERROR: arlock = %h, valid %h with mask %h",$time, arlock, VALID_ARLOCK, VALID_ARLOCK_MASK);
-                $stop;
+                $finish;
             end
             if (((arcache ^ VALID_ARCACHE) & VALID_ARCACHE_MASK) != 0) begin
                 $display ("%m: at time %t ERROR: arcache = %h, valid %h with mask %h",$time, arcache, VALID_ARCACHE, VALID_ARCACHE_MASK);
-                $stop;
+                $finish;
             end
             if (((arprot ^ VALID_ARPROT) & VALID_ARPROT_MASK) != 0) begin
                 $display ("%m: at time %t ERROR: arprot = %h, valid %h with mask %h",$time, arprot, VALID_ARPROT, VALID_ARPROT_MASK);
-                $stop;
+                $finish;
             end
         end
     end

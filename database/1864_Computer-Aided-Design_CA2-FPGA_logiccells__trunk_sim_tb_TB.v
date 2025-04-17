@@ -45,7 +45,7 @@ module TB ();
         x3 = 5'b00100; //.5
         x4 = 5'b00010; //.25
 
-        #10000 $stop;
+        #10000 $finish;
      end
 
 endmodule

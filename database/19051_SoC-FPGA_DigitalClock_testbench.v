@@ -89,7 +89,7 @@ begin
   #130000;
   t_modify =1;
   #1000;
-  $stop;
+  $finish;
 end
 
 

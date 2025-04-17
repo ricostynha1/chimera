@@ -116,7 +116,7 @@ begin
 		@(ready) 
 			begin 
 				#35;
-				$stop;
+				$finish;
 			end 
   end
 end 

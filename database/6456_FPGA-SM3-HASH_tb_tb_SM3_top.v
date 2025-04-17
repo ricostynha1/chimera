@@ -70,7 +70,7 @@ initial
 		#500
 		@(posedge clk_in)
 			SM3_en_in	=	0;		
-		$stop;
+		$finish;
 	end
 
 		

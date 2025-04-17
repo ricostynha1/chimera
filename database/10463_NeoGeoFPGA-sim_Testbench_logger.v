@@ -79,7 +79,7 @@ module logger(
 		
 		$fclose(f_video);
 		$fclose(f_cab_io);
-		$stop;
+		$finish;
 	end
 	
 	// Simulates MV-ELA board

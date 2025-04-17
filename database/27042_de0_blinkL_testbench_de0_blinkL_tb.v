@@ -34,7 +34,7 @@ initial begin
             force de0_blinkL.cnt1sec.cnt50mhz = 26'd49_999_998;
             release de0_blinkL.cnt1sec.cnt50mhz;
     end
-    #CYCLE $stop;
+    #CYCLE $finish;
 end
 
 endmodule

@@ -36,7 +36,7 @@ initial begin
 // Verify that gen1hz is HIGH at 50x10^6 clock rises. 
 #CYCLE force cnt1sec.cnt50mhz = 26'd49_999_998;
        release cnt1sec.cnt50mhz;
-#(3*CYCLE) $stop;
+#(3*CYCLE) $finish;
 end
 
 endmodule

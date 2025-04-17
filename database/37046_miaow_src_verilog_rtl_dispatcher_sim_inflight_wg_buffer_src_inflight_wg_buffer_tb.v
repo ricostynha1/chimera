@@ -213,7 +213,7 @@ module inflight_wg_buffer_tb
       end // while (!(&sim_wg_ended))
 
       repeat(200) @(posedge clk);
-      $stop;
+      $finish;
    end // initial begin
    
    

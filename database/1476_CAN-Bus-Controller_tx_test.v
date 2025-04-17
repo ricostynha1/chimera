@@ -74,7 +74,7 @@ module tx_test;
 
 		#101 send_data = 1'b1;
 		#3000 send_data = 1'b0;
-		#310000 $stop;
+		#310000 $finish;
 	end
 		always #1.25 clk=~clk;
 		always #1000 baud_clk=~baud_clk;

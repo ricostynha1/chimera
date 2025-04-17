@@ -186,7 +186,7 @@ task psg_dump::load_psg(string filename);
 		else
 		begin
 			$display("Wrong byte from PSG file: %x at position %x (%d)",p,ptr-1,ptr-1);
-			$stop;
+			$finish;
 		end
 	end
 

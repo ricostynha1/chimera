@@ -220,7 +220,7 @@ module Computer_System_ARM_A9_HPS #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					f2s_width_check ( .error(1'b1) );
@@ -229,7 +229,7 @@ module Computer_System_ARM_A9_HPS #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					s2f_width_check ( .error(1'b1) );

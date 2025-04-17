@@ -383,7 +383,7 @@ module dis_controller_tb
       
       // End of simulation
       repeat(100) @(posedge clk);
-      $stop;
+      $finish;
    end
    
 endmodule // dis_controller_tb

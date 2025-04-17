@@ -316,7 +316,7 @@ always begin
     //nextpixel;
   end  
   
-  $stop;
+  $finish;
       
 end  
 

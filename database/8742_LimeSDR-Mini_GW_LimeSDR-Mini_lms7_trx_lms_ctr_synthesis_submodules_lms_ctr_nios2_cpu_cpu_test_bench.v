@@ -451,7 +451,7 @@ module lms_ctr_nios2_cpu_cpu_test_bench (
           if (^(F_valid) === 1'bx)
             begin
               $write("%0d ns: ERROR: lms_ctr_nios2_cpu_cpu_test_bench/F_valid is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -462,7 +462,7 @@ module lms_ctr_nios2_cpu_cpu_test_bench (
           if (^(D_valid) === 1'bx)
             begin
               $write("%0d ns: ERROR: lms_ctr_nios2_cpu_cpu_test_bench/D_valid is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -473,7 +473,7 @@ module lms_ctr_nios2_cpu_cpu_test_bench (
           if (^(E_valid) === 1'bx)
             begin
               $write("%0d ns: ERROR: lms_ctr_nios2_cpu_cpu_test_bench/E_valid is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -484,7 +484,7 @@ module lms_ctr_nios2_cpu_cpu_test_bench (
           if (^(W_valid) === 1'bx)
             begin
               $write("%0d ns: ERROR: lms_ctr_nios2_cpu_cpu_test_bench/W_valid is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -498,7 +498,7 @@ module lms_ctr_nios2_cpu_cpu_test_bench (
           if (^(R_wr_dst_reg) === 1'bx)
             begin
               $write("%0d ns: ERROR: lms_ctr_nios2_cpu_cpu_test_bench/R_wr_dst_reg is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -512,7 +512,7 @@ module lms_ctr_nios2_cpu_cpu_test_bench (
           if (^(W_wr_data) === 1'bx)
             begin
               $write("%0d ns: ERROR: lms_ctr_nios2_cpu_cpu_test_bench/W_wr_data is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -526,7 +526,7 @@ module lms_ctr_nios2_cpu_cpu_test_bench (
           if (^(R_dst_regnum) === 1'bx)
             begin
               $write("%0d ns: ERROR: lms_ctr_nios2_cpu_cpu_test_bench/R_dst_regnum is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -537,7 +537,7 @@ module lms_ctr_nios2_cpu_cpu_test_bench (
           if (^(d_write) === 1'bx)
             begin
               $write("%0d ns: ERROR: lms_ctr_nios2_cpu_cpu_test_bench/d_write is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -551,7 +551,7 @@ module lms_ctr_nios2_cpu_cpu_test_bench (
           if (^(d_byteenable) === 1'bx)
             begin
               $write("%0d ns: ERROR: lms_ctr_nios2_cpu_cpu_test_bench/d_byteenable is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -565,7 +565,7 @@ module lms_ctr_nios2_cpu_cpu_test_bench (
           if (^(d_address) === 1'bx)
             begin
               $write("%0d ns: ERROR: lms_ctr_nios2_cpu_cpu_test_bench/d_address is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -576,7 +576,7 @@ module lms_ctr_nios2_cpu_cpu_test_bench (
           if (^(d_read) === 1'bx)
             begin
               $write("%0d ns: ERROR: lms_ctr_nios2_cpu_cpu_test_bench/d_read is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -587,7 +587,7 @@ module lms_ctr_nios2_cpu_cpu_test_bench (
           if (^(i_read) === 1'bx)
             begin
               $write("%0d ns: ERROR: lms_ctr_nios2_cpu_cpu_test_bench/i_read is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -601,7 +601,7 @@ module lms_ctr_nios2_cpu_cpu_test_bench (
           if (^(i_address) === 1'bx)
             begin
               $write("%0d ns: ERROR: lms_ctr_nios2_cpu_cpu_test_bench/i_address is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -615,7 +615,7 @@ module lms_ctr_nios2_cpu_cpu_test_bench (
           if (^(i_readdata) === 1'bx)
             begin
               $write("%0d ns: ERROR: lms_ctr_nios2_cpu_cpu_test_bench/i_readdata is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 

@@ -119,6 +119,6 @@ module DSP_block_TB1();
             PCIN_tb = $urandom_range(0, 5000);
             @(negedge CLK_tb);
         end
-        $stop;
+        $finish;
     end
 endmodule

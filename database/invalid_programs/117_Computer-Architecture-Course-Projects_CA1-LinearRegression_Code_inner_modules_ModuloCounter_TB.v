@@ -26,6 +26,6 @@ module ModuloCounter_TB ();
     #(`clock_dur * 150 * 2); //test modulo
     #(`clock_dur * 3 * 2) cnt_en = 1'b0; //test count enable after 3 clock
     #(`clock_dur * 10 * 2) rst = 1'b1; //after 10 clocks nothing should change and then counter will reset ro 0
-    #(`clock_dur * 10 * 2) $stop;
+    #(`clock_dur * 10 * 2) $finish;
   end
 endmodule

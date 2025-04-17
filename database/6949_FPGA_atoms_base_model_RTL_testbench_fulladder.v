@@ -44,7 +44,7 @@ module testbench_fulladder(
     #10;
 
     // ฝแส๘ทยีๆ
-    $stop;
+    $finish;
 
   end
 

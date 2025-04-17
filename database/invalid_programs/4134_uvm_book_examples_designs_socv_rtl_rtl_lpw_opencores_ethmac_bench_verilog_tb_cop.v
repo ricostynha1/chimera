@@ -289,7 +289,7 @@ begin
 
   join    
 
-  #10000 $stop;
+  #10000 $finish;
 end
 
 

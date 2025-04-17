@@ -54,7 +54,7 @@ initial begin
 
     #10000;
 
-    $stop;
+    $finish;
 end
 
 integer i;

@@ -52,7 +52,7 @@ module upd4990(
 		
 	always @(posedge CLKG)
 	begin
-		$stop;
+		$finish;
 		if (CS)
 		begin
 			$display("RTC clocked in data bit '%B'", DATA_IN);		// DEBUG

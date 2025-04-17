@@ -58,7 +58,7 @@ initial begin
 		reset<=1'b0;
 		#200
 	
-	$stop;
+	$finish;
 end
  Bn UUT (x,Out,clk,reset);
 

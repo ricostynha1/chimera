@@ -28,7 +28,7 @@ always begin
   clk = ~clk;
   memWriteData  = memWriteData + 1;
 	i = i + 1;
-	if (i == 100) $stop;
+	if (i == 100) $finish;
 end
 always #200 memWriteEnable = ~memWriteEnable;
 endmodule

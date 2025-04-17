@@ -56,7 +56,7 @@ always @ (posedge clk) begin
         buffer_usage_max = buffer_usage + 11'd32;
         //$display("elastic_fifo_for_output : buffer_usage = %4d bytes", buffer_usage);
     end
-    if (buffer_usage >= THRESHOLD_OVERFLOW && i_en) begin $display("*** error : elastic_fifo almost overflow!!"); $stop; end
+    if (buffer_usage >= THRESHOLD_OVERFLOW && i_en) begin $display("*** error : elastic_fifo almost overflow!!"); $finish; end
 end
 end endgenerate
 

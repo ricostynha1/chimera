@@ -76,7 +76,7 @@ module micro_sim_tb();
 
                 if(!file[j]) begin
                     $display("Error abriendo archivo");
-                    $stop;
+                    $finish;
                 end else begin
                     for (i = 0; i <= IMG_SIZE; i = i+1) begin
                         if(i == IMG_SIZE && j == aux-1)

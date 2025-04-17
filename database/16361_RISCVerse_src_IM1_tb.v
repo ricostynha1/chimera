@@ -99,7 +99,7 @@ module IM1_tb;
         
         // End of test
         #40;
-        $stop;
+        $finish;
     end
 
 endmodule

@@ -67,7 +67,7 @@ localparam TERMINALPC=8;
              verifyEqual32(myCPU.b2v_rf.contents_t0,
                                65537);
           $display("CPU functional");
-          $stop;
+          $finish;
          end
         ///////////////////////////////////////////////////////////////////////////////////
    end

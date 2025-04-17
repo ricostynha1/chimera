@@ -51,7 +51,7 @@ x <= 64'h4000420044004500;
 #(PERIOD)
 	reset <= 1'b0;
 #400
-$stop;
+$finish;
 end
 AvgUnit   a (x,AvgOut,clk,reset);
 assign add = a.add;

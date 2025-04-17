@@ -586,7 +586,7 @@ module tb_NandFlashController_Top;
                     m <= m + 1;
                     if (memory[base_adr*2160 + m] != m_axis_read_data_tdata) begin
                         $display("Error Read data wrong %d %d %04x %04x",base_adr,m,memory[base_adr*2160 + m],oReadData);
-                        $stop;
+                        $finish;
                     end
                 end else begin
                     m <= m;

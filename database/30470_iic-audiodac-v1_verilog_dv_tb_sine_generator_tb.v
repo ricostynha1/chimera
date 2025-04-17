@@ -34,7 +34,7 @@ begin
     #CLK_PERIOD
     rst_n_tb = 1;
     #50000000
-    $stop;
+    $finish;
 end
 
 endmodule

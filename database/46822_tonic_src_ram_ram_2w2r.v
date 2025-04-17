@@ -171,7 +171,7 @@ ram_2p_wrapper  #(
 always @(posedge clk) begin
     if (w0_val & w1_val & (w0_addr == w1_addr)) begin
         $display("ERROR Checker: %m: two write to address 0x%h in the same cycle @%t. No particular ordering between writes is guaranteed",  w0_addr, $time);
-    $stop;
+    $finish;
     end
 end
 

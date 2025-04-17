@@ -72,7 +72,7 @@ module ghrd_10as066n2_fpga_m_altera_jtag_avalon_master_171_wqhllki #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					use_pli_check ( .error(1'b1) );
@@ -81,7 +81,7 @@ module ghrd_10as066n2_fpga_m_altera_jtag_avalon_master_171_wqhllki #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					pli_port_check ( .error(1'b1) );
@@ -90,7 +90,7 @@ module ghrd_10as066n2_fpga_m_altera_jtag_avalon_master_171_wqhllki #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					fifo_depths_check ( .error(1'b1) );

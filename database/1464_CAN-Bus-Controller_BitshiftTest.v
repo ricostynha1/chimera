@@ -85,7 +85,7 @@ module BitshiftTest;
 		#2000 rx = 1'b1;
 		#10000 rx = 1'b0;
 		#6000 rx = 1'b1;
-		#70000; $stop;
+		#70000; $finish;
 		
 	end
 	

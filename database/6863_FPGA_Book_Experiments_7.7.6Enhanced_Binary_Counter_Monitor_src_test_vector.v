@@ -28,7 +28,7 @@ module test_vector
 		asyn_clr(); //rst
 		load_data(7); //load 7
 		counting(7,0) ; //count down for 7 cycles (7-0)		
-		$stop;
+		$finish;
 	 end
 	 
 	 task initialize(); begin //initialize value

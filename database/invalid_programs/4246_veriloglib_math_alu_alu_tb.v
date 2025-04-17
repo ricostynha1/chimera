@@ -47,7 +47,7 @@ module alu_tb;
         #10;
         rst_n = 0;
         $display("Test complete");
-        $stop;
+        $finish;
         $finish;
         end
 endmodule;

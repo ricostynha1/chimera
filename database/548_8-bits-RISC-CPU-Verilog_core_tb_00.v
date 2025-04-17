@@ -45,5 +45,5 @@ module core_tb_00  ;
   end
 
   initial
-#20000 $stop;
+#20000 $finish;
 endmodule

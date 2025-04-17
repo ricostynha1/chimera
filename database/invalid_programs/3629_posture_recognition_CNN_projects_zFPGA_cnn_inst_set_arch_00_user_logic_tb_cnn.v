@@ -174,7 +174,7 @@ module tb_cnn;
 		#1000	$fclose(fp);		
 		
 		/// 结束
-		#40000	$stop;
+		#40000	$finish;
 	end
 							
 endmodule

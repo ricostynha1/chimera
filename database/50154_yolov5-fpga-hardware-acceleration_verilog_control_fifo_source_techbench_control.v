@@ -63,7 +63,7 @@ initial begin
     #(CYCLE*10);
     
 
-    $stop;
+    $finish;
 end
 
 

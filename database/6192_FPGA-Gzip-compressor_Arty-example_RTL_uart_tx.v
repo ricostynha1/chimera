@@ -282,9 +282,9 @@ assign f_tready = state[0];   // (state == S_IDLE)
 // parameter checking
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
 initial begin
-    if (BYTE_WIDTH <= 0) begin $error("invalid parameter : BYTE_WIDTH<=0"); $stop; end
-    if (STOP_BITS  <= 0) begin $error("invalid parameter : STOP_BITS <=0"); $stop; end
-    if (BAUD_CYCLES < 1) begin $error("invalid parameter : BAUD_CYCLES < 1, please use a faster driving clock"); $stop; end
+    if (BYTE_WIDTH <= 0) begin $error("invalid parameter : BYTE_WIDTH<=0"); $finish; end
+    if (STOP_BITS  <= 0) begin $error("invalid parameter : STOP_BITS <=0"); $finish; end
+    if (BAUD_CYCLES < 1) begin $error("invalid parameter : BAUD_CYCLES < 1, please use a faster driving clock"); $finish; end
     
     $display("uart_tx :           parity = %s" , PARITY );
     $display("uart_tx :     clock period = %.0f ns   (%-10d Hz)" , 1000000000.0/CLK_FREQ  , CLK_FREQ );
@@ -334,7 +334,7 @@ generate genvar index, i;
                 relative_error_percent
             );
             
-            if ( relative_error_percent > 3.0 ) begin $error("relative_error is too large"); $stop; end   // if relative error larger than 3%
+            if ( relative_error_percent > 3.0 ) begin $error("relative_error is too large"); $finish; end   // if relative error larger than 3%
         end
     end
 endgenerate

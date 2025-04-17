@@ -22,7 +22,7 @@ module counter128_async_resetb_tb;
   end
   
   initial begin
-    #5000 $stop;
+    #5000 $finish;
   end
 
 endmodule

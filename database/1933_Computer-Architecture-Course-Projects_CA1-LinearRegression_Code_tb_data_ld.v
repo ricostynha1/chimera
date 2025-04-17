@@ -41,7 +41,7 @@ initial
 			#100 err_done = 1;
 			#50 err_done = 0;
 		end
-	#1000 $stop;
+	#1000 $finish;
 	end
 	
 endmodule

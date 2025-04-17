@@ -21,6 +21,6 @@ module MUX_TB ();
 
     sel = 2'd2;
 
-    #10 $stop;
+    #10 $finish;
   end
 endmodule

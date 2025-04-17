@@ -238,9 +238,9 @@ generate if (SIMULATION) begin
 always @ (posedge clk)
     if (state == S_SEARCH_D2) begin
         if ( ~mvb[HIST_BITS-1] ) begin
-            if (mva + mvb >= (1<<HIST_BITS>>1) ) begin $display("*** error: histogram overflow when building huffman tree"); $stop; end
+            if (mva + mvb >= (1<<HIST_BITS>>1) ) begin $display("*** error: histogram overflow when building huffman tree"); $finish; end
         end
-        if ( mva[HIST_BITS-1] ) begin $display("*** error: failed to find the 1st minimum value"); $stop; end
+        if ( mva[HIST_BITS-1] ) begin $display("*** error: failed to find the 1st minimum value"); $finish; end
     end
 end endgenerate
 
@@ -267,7 +267,7 @@ always @ (posedge clk)
     end else if (tree_merge) begin
         for (i=0; i<HIST_ITEM_COUNT; i=i+1) begin
             if ( groups[i] == group_a || groups[i] == group_b ) begin
-                if (huffman_lens[i] == (MAX_DEPTH-1)) begin $display("*** error : huffman tree depth overflow"); $stop; end
+                if (huffman_lens[i] == (MAX_DEPTH-1)) begin $display("*** error : huffman tree depth overflow"); $finish; end
             end
         end
     end
@@ -344,7 +344,7 @@ always @ (posedge clk or negedge rstn)                                          
 generate if (SIMULATION) begin
 always @ (posedge clk)
     if (gen_bits_e1)
-        if (huffman_len > MAX_DEPTH) begin $display("*** error : huffman depth overflow"); $stop; end
+        if (huffman_len > MAX_DEPTH) begin $display("*** error : huffman depth overflow"); $finish; end
 end endgenerate
 
 

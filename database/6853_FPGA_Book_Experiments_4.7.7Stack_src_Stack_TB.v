@@ -106,7 +106,7 @@ module Stack_TB;
 		push=0;
 		repeat(20) @(negedge clk); //read from 233-to-240
 	
-		$stop;	
+		$finish;	
 	end
 	
 	initial begin

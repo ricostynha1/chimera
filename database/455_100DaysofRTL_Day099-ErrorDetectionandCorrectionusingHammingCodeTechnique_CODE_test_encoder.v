@@ -12,6 +12,6 @@ module test_encoder;
     initial begin
      data=4'b0110;	
      #2 $display("\n \t Output of Hamming Encoder: %b \n",ham_data_encoder);
-    #10 $stop;  //we will get output=1010101, please check in console after run the simulation
+    #10 $finish;  //we will get output=1010101, please check in console after run the simulation
     end
     endmodule

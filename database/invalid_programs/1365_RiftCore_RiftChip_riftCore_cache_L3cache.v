@@ -628,7 +628,7 @@ assign db_pop = ( l3c_state_qout == L3C_STATE_EVICT & l3c_state_dnxt != L3C_STAT
 always @( negedge CLK ) begin
 	if ( (l3c_state_dnxt == L3C_STATE_CKTAG) & ~L2C_AWVALID & ~L2C_ARVALID ) begin
 		$display("Assert Fail at L3cache");
-		$stop;
+		$finish;
 	end
 
 

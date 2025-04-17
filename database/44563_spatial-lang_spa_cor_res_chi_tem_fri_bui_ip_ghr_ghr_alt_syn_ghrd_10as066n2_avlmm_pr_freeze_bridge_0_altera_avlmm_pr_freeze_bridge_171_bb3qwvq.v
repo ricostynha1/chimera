@@ -57,7 +57,7 @@ module ghrd_10as066n2_avlmm_pr_freeze_bridge_0_altera_avlmm_pr_freeze_bridge_171
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					enable_freeze_from_pr_region_check ( .error(1'b1) );
@@ -66,7 +66,7 @@ module ghrd_10as066n2_avlmm_pr_freeze_bridge_0_altera_avlmm_pr_freeze_bridge_171
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					enable_traffic_tracking_check ( .error(1'b1) );

@@ -880,7 +880,7 @@ module micron_ddr_sdram_model #(
             // Precharge to Auto Refresh
             if (Pc_b0 === 1'b0 || Pc_b1 === 1'b0 || Pc_b2 === 1'b0 || Pc_b3 === 1'b0) begin
                 $display ("At time %t ERROR: All banks must be Precharged before Auto Refresh", $time);
-                if (!no_halt) $stop (0);
+                if (!no_halt) $finish (0);
             end else begin
                 aref_count = aref_count + 1;
                 RFC_chk = $time;
@@ -912,7 +912,7 @@ module micron_ddr_sdram_model #(
             // Precharge to LMR/EMR
             if (Pc_b0 === 1'b0 || Pc_b1 === 1'b0 || Pc_b2 === 1'b0 || Pc_b3 === 1'b0) begin
                 $display ("At time %t ERROR: all banks must be Precharged before Extended Mode Register", $time);
-                if (!no_halt) $stop (0);
+                if (!no_halt) $finish (0);
             end else begin
                 if (Addr[0] === 1'b0) begin
                     DLL_enable = 1'b1;
@@ -1019,7 +1019,7 @@ module micron_ddr_sdram_model #(
             if ((Ba === 2'b00 && Pc_b0  === 1'b0) || (Ba === 2'b01 && Pc_b1  === 1'b0) ||
                 (Ba === 2'b10 && Pc_b2  === 1'b0) || (Ba === 2'b11 && Pc_b3  === 1'b0)) begin
                 $display ("At time %t ERROR: Bank = %h is already activated - Command Ignored", $time, Ba);
-                if (!no_halt) $stop (0);
+                if (!no_halt) $finish (0);
             end else begin
                 // Activate Bank 0
                 if (Ba === 2'b00 && Pc_b0 === 1'b1) begin
@@ -1219,12 +1219,12 @@ module micron_ddr_sdram_model #(
             if (Data_in_enable === 1'b1) begin
                 // Illegal to burst terminate a Write
                 $display ("At time %t ERROR: It's illegal to burst terminate a Write", $time);
-                if (!no_halt) $stop (0);
+                if (!no_halt) $finish (0);
             end else if (Read_precharge[0] === 1'b1 || Read_precharge[1] === 1'b1 ||
                 // Illegal to burst terminate a Read with Auto Precharge
                 Read_precharge[2] === 1'b1 || Read_precharge[3] === 1'b1) begin
                 $display ("At time %t ERROR: It's illegal to burst terminate a Read with Auto Precharge", $time);
-                if (!no_halt) $stop (0);
+                if (!no_halt) $finish (0);
             end else begin
                 // Burst Terminate Command Pipeline for Read
                 Cmnd_bst[cas_latency_x2] = 1'b1;
@@ -1270,7 +1270,7 @@ module micron_ddr_sdram_model #(
             // Interrupt a Read with Auto Precharge (same bank only)
             if (Read_precharge [Ba] === 1'b1) begin
                 $display ("At time %t ERROR: It's illegal to interrupt a Read with Auto Precharge", $time);
-                if (!no_halt) $stop (0);
+                if (!no_halt) $finish (0);
                 // Cancel Auto Precharge
                 if (Addr[10] === 1'b0) begin
                     Read_precharge [Ba]= 1'b0;
@@ -1280,7 +1280,7 @@ module micron_ddr_sdram_model #(
             if ((Ba === 2'b00 && Pc_b0 === 1'b1) || (Ba === 2'b01 && Pc_b1 === 1'b1) ||
                 (Ba === 2'b10 && Pc_b2 === 1'b1) || (Ba === 2'b11 && Pc_b3 === 1'b1)) begin
                 $display("At time %t ERROR: Bank is not Activated for Read", $time);
-                if (!no_halt) $stop (0);
+                if (!no_halt) $finish (0);
             end else begin
                 // CAS Latency pipeline
                 Read_cmnd[cas_latency_x2] = 1'b1;
@@ -1298,7 +1298,7 @@ module micron_ddr_sdram_model #(
         if (Write_enable === 1'b1) begin
             if (!(power_up_done)) begin
                 $display ("%m: at time %t ERROR: Power Up and Initialization Sequence not completed before executing Write Command", $time);
-                if (!no_halt) $stop (0);
+                if (!no_halt) $finish (0);
             end
             // display DEBUG message
             if (DEBUG) begin
@@ -1324,7 +1324,7 @@ module micron_ddr_sdram_model #(
             // Interrupt a Write with Auto Precharge (same bank only)
             if (Write_precharge [Ba] === 1'b1) begin
                 $display ("At time %t ERROR: it's illegal to interrupt a Write with Auto Precharge", $time);
-                if (!no_halt) $stop (0);
+                if (!no_halt) $finish (0);
                 // Cancel Auto Precharge
                 if (Addr[10] === 1'b0) begin
                     Write_precharge [Ba]= 1'b0;
@@ -1334,7 +1334,7 @@ module micron_ddr_sdram_model #(
             if ((Ba === 2'b00 && Pc_b0 === 1'b1) || (Ba === 2'b01 && Pc_b1 === 1'b1) ||
                 (Ba === 2'b10 && Pc_b2 === 1'b1) || (Ba === 2'b11 && Pc_b3 === 1'b1)) begin
                 $display("At time %t ERROR: Bank is not Activated for Write", $time);
-                if (!no_halt) $stop (0);
+                if (!no_halt) $finish (0);
             end else begin
                 // Pipeline for Write
                 Write_cmnd [3] = 1'b1;

@@ -27,7 +27,7 @@ module greater_than_4bit_TB;
 			$strobe("%0d %0d  %b",a,b,gt);
 			#10;
 		end
-		$stop;
+		$finish;
 
 	end
       

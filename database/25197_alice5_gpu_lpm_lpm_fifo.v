@@ -95,25 +95,25 @@ module lpm_fifo (   data,
         begin
             $display ("Error! LPM_WIDTH must be greater than 0.");
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
         if (lpm_numwords <= 1)
         begin
             $display ("Error! LPM_NUMWORDS must be greater than or equal to 2.");
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
         if ((lpm_widthu !=1) && (lpm_numwords > (1 << lpm_widthu)))
         begin
             $display ("Error! LPM_NUMWORDS must equal to the ceiling of log2(LPM_WIDTHU).");
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
         if (lpm_numwords <= (1 << (lpm_widthu - 1)))
         begin
             $display ("Error! LPM_WIDTHU is too big for the specified LPM_NUMWORDS.");
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
 
         overflow_checking = eva.GET_PARAMETER_VALUE(lpm_hint, "OVERFLOW_CHECKING");
@@ -123,7 +123,7 @@ module lpm_fifo (   data,
         begin
             $display ("Error! OVERFLOW_CHECKING must equal to either 'ON' or 'OFF'");
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
 
         underflow_checking = eva.GET_PARAMETER_VALUE(lpm_hint, "UNDERFLOW_CHECKING");
@@ -133,7 +133,7 @@ module lpm_fifo (   data,
         begin
             $display ("Error! UNDERFLOW_CHECKING must equal to either 'ON' or 'OFF'");
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
 
         allow_rwcycle_when_full = eva.GET_PARAMETER_VALUE(lpm_hint, "ALLOW_RWCYCLE_WHEN_FULL");
@@ -143,7 +143,7 @@ module lpm_fifo (   data,
         begin
             $display ("Error! ALLOW_RWCYCLE_WHEN_FULL must equal to either 'ON' or 'OFF'");
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
 
         intended_device_family = eva.GET_PARAMETER_VALUE(lpm_hint, "INTENDED_DEVICE_FAMILY");
@@ -153,7 +153,7 @@ module lpm_fifo (   data,
         begin
             $display ("Error! Unknown INTENDED_DEVICE_FAMILY=%s.", intended_device_family);
             $display("Time: %0t  Instance: %m", $time);
-            $stop;
+            $finish;
         end
         for (i = 0; i < (1<<lpm_widthu); i = i + 1)
         begin

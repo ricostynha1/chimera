@@ -666,7 +666,7 @@ wire             test_has_ended;
           if (^(W_wr_dst_reg) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/W_wr_dst_reg is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -680,7 +680,7 @@ wire             test_has_ended;
           if (^(W_dst_regnum) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/W_dst_regnum is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -691,7 +691,7 @@ wire             test_has_ended;
           if (^(W_valid) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/W_valid is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -705,7 +705,7 @@ wire             test_has_ended;
           if (^(W_pcb) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/W_pcb is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -719,7 +719,7 @@ wire             test_has_ended;
           if (^(W_iw) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/W_iw is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -730,7 +730,7 @@ wire             test_has_ended;
           if (^(A_en) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/A_en is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -741,7 +741,7 @@ wire             test_has_ended;
           if (^(M_valid) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/M_valid is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -752,7 +752,7 @@ wire             test_has_ended;
           if (^(A_valid) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/A_valid is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -776,7 +776,7 @@ wire             test_has_ended;
           if (^(W_status_reg) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/W_status_reg is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -787,7 +787,7 @@ wire             test_has_ended;
           if (^(W_estatus_reg) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/W_estatus_reg is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -798,7 +798,7 @@ wire             test_has_ended;
           if (^(W_bstatus_reg) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/W_bstatus_reg is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -809,7 +809,7 @@ wire             test_has_ended;
           if (^(W_exception_reg) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/W_exception_reg is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -820,7 +820,7 @@ wire             test_has_ended;
           if (^(W_badaddr_reg) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/W_badaddr_reg is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -831,7 +831,7 @@ wire             test_has_ended;
           if (^(A_exc_any_active) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/A_exc_any_active is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -842,7 +842,7 @@ wire             test_has_ended;
           if (^(i_read) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/i_read is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -856,7 +856,7 @@ wire             test_has_ended;
           if (^(i_address) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/i_address is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -867,7 +867,7 @@ wire             test_has_ended;
           if (^(d_write) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/d_write is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -881,7 +881,7 @@ wire             test_has_ended;
           if (^(d_byteenable) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/d_byteenable is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -895,7 +895,7 @@ wire             test_has_ended;
           if (^(d_address) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/d_address is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -906,7 +906,7 @@ wire             test_has_ended;
           if (^(d_read) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/d_read is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 
@@ -917,7 +917,7 @@ wire             test_has_ended;
           if (^(i_readdatavalid) === 1'bx)
             begin
               $write("%0d ns: ERROR: Computer_System_Nios2_2nd_Core_cpu_test_bench/i_readdatavalid is 'x'\n", $time);
-              $stop;
+              $finish;
             end
     end
 

@@ -556,7 +556,7 @@ module ahb_gen_bfm (
       ahb_bfm_msg5 <= "NO ACTIVITY";
       ahb_bfm_msg6 <= "NO ACTIVITY";
 
-      //$stop();
+      //$finish();
 
     end
   endtask

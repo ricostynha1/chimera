@@ -372,7 +372,7 @@ module alt_ddrx_afi_block
                                     //    begin
                                     //        $write($time);
                                     //        $write(" --- wlat zero not supported in ECC --- \n");
-                                    //        $stop;
+                                    //        $finish;
                                     //    end
                                     if ((rdwr_data_valid && do_write) || (rdwr_data_valid && doing_write))
                                         ecc_wdata_fifo_read <=  1'b1;

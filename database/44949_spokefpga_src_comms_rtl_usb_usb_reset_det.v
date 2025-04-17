@@ -10,7 +10,7 @@ module usb_reset_det (
 	  input usb_n_rx,
 	  
 	   output usb_reset
-	);
+	);
 	localparam RESET_COUNT = 16'HFFFF;
 
 	// reset detection (1 bit extra for overflow)

@@ -31,7 +31,7 @@ module FSM_three_tb;
 	end
 	
 	initial begin
-		#100000 $stop;
+		#100000 $finish;
 	end
 
 endmodule

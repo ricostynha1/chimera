@@ -491,7 +491,7 @@ module adc_modular_adc_0 #(
         begin
             initial begin
                 $display("Generated module instantiated with wrong parameters");
-                $stop;
+                $finish;
             end
             instantiated_with_wrong_parameters_error_see_comment_above
                 is_this_first_or_second_adc_check ( .error(1'b1) );

@@ -31,7 +31,7 @@ RAW_BTN='b0000;
 //RAW_BTN='b0000;
 //#10;
 //RAW_BTN='b0001;
-//$stop;
+//$finish;
 end
 
 endmodule

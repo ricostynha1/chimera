@@ -28,7 +28,7 @@ module led_test_tb;
           rst_n = 1;        
 		// Add stimulus here
          #2000;
-         $stop;
+         $finish;
 	 end
    
     always #10 clk = ~ clk; //产生50MHz时钟源′

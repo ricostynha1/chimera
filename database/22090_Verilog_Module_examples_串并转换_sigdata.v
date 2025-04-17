@@ -27,7 +27,7 @@ module sigdata (
     initial begin                       // 寄存器变量初始化
         sclk = 0;
         data = 0;
-        #(`halfperiod * 1000) $stop;
+        #(`halfperiod * 1000) $finish;
     end
 
     always #(`halfperiod) sclk = ~sclk; // 产生第一个模块需要的输入时钟

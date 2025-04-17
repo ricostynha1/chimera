@@ -19,7 +19,7 @@ rst_n = 1'b0;
 #100 rst_n = 1'b1; 
 $display("rst_n = %d", rst_n) ; 
 
-$stop ;
+$finish ;
   
 end 
  

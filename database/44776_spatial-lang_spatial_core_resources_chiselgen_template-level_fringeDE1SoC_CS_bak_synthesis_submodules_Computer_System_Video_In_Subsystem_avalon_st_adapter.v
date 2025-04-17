@@ -52,7 +52,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					inbitspersymbol_check ( .error(1'b1) );
@@ -61,7 +61,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					inusepackets_check ( .error(1'b1) );
@@ -70,7 +70,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					indatawidth_check ( .error(1'b1) );
@@ -79,7 +79,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					inchannelwidth_check ( .error(1'b1) );
@@ -88,7 +88,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					inerrorwidth_check ( .error(1'b1) );
@@ -97,7 +97,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					inuseemptyport_check ( .error(1'b1) );
@@ -106,7 +106,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					inusevalid_check ( .error(1'b1) );
@@ -115,7 +115,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					inuseready_check ( .error(1'b1) );
@@ -124,7 +124,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					inreadylatency_check ( .error(1'b1) );
@@ -133,7 +133,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					outdatawidth_check ( .error(1'b1) );
@@ -142,7 +142,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					outchannelwidth_check ( .error(1'b1) );
@@ -151,7 +151,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					outerrorwidth_check ( .error(1'b1) );
@@ -160,7 +160,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					outuseemptyport_check ( .error(1'b1) );
@@ -169,7 +169,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					outusevalid_check ( .error(1'b1) );
@@ -178,7 +178,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					outuseready_check ( .error(1'b1) );
@@ -187,7 +187,7 @@ module Computer_System_Video_In_Subsystem_avalon_st_adapter #(
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
-				$stop;
+				$finish;
 			end
 			instantiated_with_wrong_parameters_error_see_comment_above
 					outreadylatency_check ( .error(1'b1) );

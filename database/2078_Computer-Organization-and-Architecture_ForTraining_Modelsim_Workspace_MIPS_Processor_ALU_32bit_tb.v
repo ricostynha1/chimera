@@ -104,7 +104,7 @@ module ALU_32bit_tb;
       end 
 
       $display("Simulation completed successfully!");
-      $stop;
+      $finish;
   end
 
 endmodule

@@ -601,6 +601,6 @@ module	axilupsz #(
 
 	// Parameter checking
 	// {{{
-	initial if (SDW > MDW) $stop;
+	initial if (SDW > MDW) $finish;
 	// }}}
 endmodule

@@ -323,7 +323,7 @@ module unit_tests();
                 $display("Signature: %h. Golden reference: %h", dut1.ram[m], current_golden_reference[z]);
                 failing_tests_counter = failing_tests_counter+1;
                 current_test_failed_flag = 1;
-                $stop();
+                $finish();
               end
             end            
             z=z+1;
@@ -338,7 +338,7 @@ module unit_tests();
       // The program ran for 500000 cycles and did not finish (something is wrong)
       if (j == 500000) begin
         $info("TEST FAILED (probably hanging): %s", unit_test_programs_array[k]);
-        $stop();
+        $finish();
       end
       
     end

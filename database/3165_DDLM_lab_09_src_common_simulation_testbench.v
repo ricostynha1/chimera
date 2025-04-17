@@ -66,7 +66,7 @@ module testbench;
     initial begin
         repeat (Cycles)  @(posedge clk);
         $display ("Timeout");
-        $stop;
+        $finish;
     end
 
     // simulation output

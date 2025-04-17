@@ -54,7 +54,7 @@ initial begin
 
     #10000;
 
-    $stop;
+    $finish;
 end
 
 // 产生脉冲信号流，周期为 40 个时间单位

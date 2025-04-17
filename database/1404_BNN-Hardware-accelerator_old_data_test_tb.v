@@ -41,7 +41,7 @@ module test_tb;
         compute_start();
 
         #20000;
-        $stop;
+        $finish;
     end
     
     initial begin

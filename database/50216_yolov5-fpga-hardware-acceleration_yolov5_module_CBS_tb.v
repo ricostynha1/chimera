@@ -66,7 +66,7 @@ filters<=288'b001111000000000000111100000000000011110000000000001111000000000000
 # (100*PERIOD) 
         $display("three!");
         for(i=0;i<size;i=i+1) $display("%b ",out[i*DATA_WIDTH +: DATA_WIDTH]);
-	$stop;
+	$finish;
 end
 
 CBS #(

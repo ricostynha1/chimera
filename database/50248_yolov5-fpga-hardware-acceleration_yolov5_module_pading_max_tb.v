@@ -53,7 +53,7 @@ integer i;
         # (PERIOD/2) reset<=1'b0;
         #200
     for(i=0;i<K*(H+12)*(W+12);i=i+1) $display("%b",out_p6[i*DATA_WIDTH+:DATA_WIDTH]);
-     $stop;
+     $finish;
     end
 pading_max UUT (clk,reset,x,out_m5,out_m9,out_m13);
 assign out_p6=UUT.out_p6;

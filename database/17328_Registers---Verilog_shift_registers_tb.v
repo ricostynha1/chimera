@@ -68,7 +68,7 @@ module shift_registers_tb;
         #20 data_i_tb = 8'b00001111;
 
         // Finalize test
-        #20 $stop;
+        #20 $finish;
     end
 
     // Monitor changes ShiftRight and ShiftLeft module

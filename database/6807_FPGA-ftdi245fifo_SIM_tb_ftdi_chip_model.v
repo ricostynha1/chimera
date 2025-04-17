@@ -93,7 +93,7 @@ always @ (posedge ftdi_clk)                    // data from FPGA to FTDI-Chip (w
         for (i=0; i<(1<<CHIP_EW); i=i+1) begin
             if (ftdi_be[i]) begin
                 $write(" %02X", ftdi_data[8*i +: 8] );
-                if (txbyte !== ftdi_data[8*i +: 8]) begin $display("*** error : data incorrect"); $stop; end
+                if (txbyte !== ftdi_data[8*i +: 8]) begin $display("*** error : data incorrect"); $finish; end
                 txbyte = txbyte + 1;
             end
         end

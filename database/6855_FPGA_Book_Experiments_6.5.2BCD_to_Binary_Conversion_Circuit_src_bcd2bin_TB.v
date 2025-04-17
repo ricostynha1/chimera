@@ -57,7 +57,7 @@ module bcd2bin_TB;
 			$display("     %0d          %b(%0d)",i,bin,bin);
 			repeat(5)@(negedge clk);
 		end
-		$stop;
+		$finish;
 		
 	end
       

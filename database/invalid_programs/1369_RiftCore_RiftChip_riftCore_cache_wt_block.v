@@ -223,7 +223,7 @@ always @( negedge CLK ) begin
 
 	if (0) begin
 		$display("Assert Fail at wtb_block");
-		$stop;
+		$finish;
 	end
 
 end

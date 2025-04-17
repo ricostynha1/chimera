@@ -28,7 +28,7 @@ initial begin
 	#20;
 	$dumpflush;
 	$finish(2);
-	$stop(2);
+	$finish(2);
 end
 
 test1 #(

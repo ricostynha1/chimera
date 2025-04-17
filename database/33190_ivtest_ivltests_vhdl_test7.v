@@ -58,7 +58,7 @@ module main;
             $display("ERROR!");
             $display("VERILOG: ", veri);
             $display("VHDL: ", o);
-            $stop;
+            $finish;
         end
     end
     initial begin

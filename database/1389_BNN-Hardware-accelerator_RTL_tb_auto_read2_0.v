@@ -177,7 +177,7 @@ end
 if(function_now==0) begin
         write_weight_start();
         // read_FSM();//just a test
-        // $stop;
+        // $finish;
         write_weight();
 
         while(S_AXI_RDATA!=32'd1)begin//wait ack
@@ -251,7 +251,7 @@ end
                 //             error_cnt = error_cnt+1;
 
                 //             // #1000
-                //             // $stop;
+                //             // $finish;
                 //         end
                 //     end
                 //     ofmaps_validation_cnt=ofmaps_validation_cnt+1;
@@ -262,7 +262,7 @@ end
                     error_cnt = error_cnt+1;
 
                     // #1000
-                    // $stop;
+                    // $finish;
                 end
                 validate_cnt = validate_cnt+1;
             end
@@ -283,7 +283,7 @@ end
                         error_cnt = error_cnt+1;
 
                         #1000
-                        $stop;
+                        $finish;
                     end
                     ofmaps_validation_cnt=ofmaps_validation_cnt+1;
                 end

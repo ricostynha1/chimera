@@ -9,7 +9,7 @@ module test();
    integer start;
 
    initial
-     #900000 begin $display("FAILED"); $stop; end
+     #900000 begin $display("FAILED"); $finish; end
 
    initial
      #100000 start = 1;

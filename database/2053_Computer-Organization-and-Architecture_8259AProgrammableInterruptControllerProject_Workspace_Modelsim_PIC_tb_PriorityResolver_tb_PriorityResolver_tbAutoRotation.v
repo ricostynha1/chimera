@@ -122,7 +122,7 @@
             oldISR <= ISR_reg;
         end
 
-        $stop;
+        $finish;
     end
     /*
     * When an INT_request arrived, INT_requestAck must be inverted.

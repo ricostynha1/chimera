@@ -92,7 +92,7 @@ module tb;
         test_for_receiver_clock_period (22);
 
         `ifdef MODEL_TECH  // Mentor ModelSim and Questa
-            $stop;
+            $finish;
         `else
             $finish;
         `endif

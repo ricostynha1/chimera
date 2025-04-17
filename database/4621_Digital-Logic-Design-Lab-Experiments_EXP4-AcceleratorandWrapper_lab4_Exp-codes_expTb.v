@@ -18,7 +18,7 @@ module tb();
 		#5 x = {1,{15{1'b0}}};
 		#18 start = 1; 
 		#20 start = 0;  x = {16{1'b1}};
-		#5000 $stop;
+		#5000 $finish;
 
 	end
 	always #10 clk = ~clk;

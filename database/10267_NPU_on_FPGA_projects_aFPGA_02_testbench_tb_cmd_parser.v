@@ -66,7 +66,7 @@ endtask
 					uart_rx_byte(8'H10); 
 					uart_rx_byte(8'H00); 
 		/// 结束
-		#2000		$stop; 
+		#2000		$finish; 
 	end
 	
 endmodule

@@ -43,7 +43,7 @@ module testbench;
         x     = 0;
         shamt = 0;
         #8
-        $stop;
+        $finish;
     end
     
     initial

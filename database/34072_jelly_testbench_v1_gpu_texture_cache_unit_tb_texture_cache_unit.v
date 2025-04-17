@@ -280,7 +280,7 @@ module tb_texture_cache_unit();
                     end
                     else begin
                         $display("!!!ERROR!!!");
-                        $stop();
+                        $finish();
                     end
                 end
                 else begin
@@ -291,7 +291,7 @@ module tb_texture_cache_unit();
                         $display("!!!ERROR!!!");
                         $display("[NG] %d %d %h", s_ruser_y, s_ruser_x, s_rdata);
                         ng <= 1;
-//                      $stop();
+//                      $finish();
                     end
                 end
             end

@@ -29,7 +29,7 @@ module greater_than_2bit_TB;
 			$strobe("%b     %b     %b    %b   %b",a[1],a[0],b[1],b[0],gt);
 			#10;
 		end
-		$stop;
+		$finish;
 	end
       
 endmodule

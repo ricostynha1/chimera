@@ -30,7 +30,7 @@ module testbench;
         x = 2'b00;
         y = 2'b00;
         #4
-        $stop;
+        $finish;
     end
     
     initial

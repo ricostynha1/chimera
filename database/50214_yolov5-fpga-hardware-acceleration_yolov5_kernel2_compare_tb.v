@@ -35,7 +35,7 @@ numB<=16'b0101000000100010;
 #20 numA<=16'b1011010011110110;
 numB<=16'b0111011000110111;
 #20
-$stop;
+$finish;
 end
 
 compare c (numA,numB,max);

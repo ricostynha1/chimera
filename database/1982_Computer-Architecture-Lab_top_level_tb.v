@@ -22,6 +22,6 @@ module TopLevelTB();
         {clk, rst} = 2'b01;
         forwardEn = 1'b1;
         #10 rst = 1'b0;
-        #30000 $stop;
+        #30000 $finish;
     end
 endmodule

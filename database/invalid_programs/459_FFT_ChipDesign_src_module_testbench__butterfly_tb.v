@@ -151,7 +151,7 @@ module butterfly_tb();
       $display("[15] %b_%b_%b %b_%b_%b\n", calc_out_test[135], calc_out_test[134:127], calc_out_test[126:119], calc_out_test[118], calc_out_test[117:110], calc_out_test[109:102]);
     end
 
-    #100 $stop; 
+    #100 $finish; 
       
   end
 

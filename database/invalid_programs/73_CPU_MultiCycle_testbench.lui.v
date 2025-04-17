@@ -64,7 +64,7 @@ localparam TERMINALPC=12;
           $display("Testing lui with immediate=1 and ori with immediate=3");
           verifyEqual32(myCPU.b2v_myRF.contents_t0, 65539);
           $display("CPU functional");
-          $stop;
+          $finish;
          end
         ///////////////////////////////////////////////////////////////////////////////////
    end

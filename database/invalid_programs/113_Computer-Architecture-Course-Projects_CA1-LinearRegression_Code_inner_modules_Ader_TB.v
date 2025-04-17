@@ -18,6 +18,6 @@ module Adder_Tb ();
   );
 
   initial begin
-    #10 $stop;
+    #10 $finish;
   end
 endmodule

@@ -80,7 +80,7 @@ module test;
 
        #500 ui_in[0] = 1;
 
-       #5000 $stop;
+       #5000 $finish;
 
     end
 endmodule // test

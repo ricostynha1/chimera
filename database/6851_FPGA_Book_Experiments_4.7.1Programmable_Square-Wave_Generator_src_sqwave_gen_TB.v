@@ -61,7 +61,7 @@ module sqwave_gen_TB;
 		m=4'd3;
 		n=4'd2; // ON=300ns OFF=100ns (5500-6500)
 		#1000;
-		$stop;
+		$finish;
 	end
 	initial begin
 		$display("Out Time");

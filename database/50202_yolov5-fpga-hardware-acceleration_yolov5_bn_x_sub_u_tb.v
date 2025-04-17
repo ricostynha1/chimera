@@ -51,7 +51,7 @@ reset <= 1'b1;
  x<=64'hBC00C000C200C400;
  #(PERIOD)
      reset <= 1'b0;
-#100 $stop;
+#100 $finish;
 end
 x_sub_u b (x,u_Out,AvgOut_temp,clk,reset);
 assign a_out=b.AvgOut;

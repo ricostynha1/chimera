@@ -15,7 +15,7 @@ module Multiplier_TB ();
   );
 
   initial begin
-    #10 $stop;
+    #10 $finish;
   end
 
 endmodule

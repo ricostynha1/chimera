@@ -30,7 +30,7 @@ always begin
       if (counter == 500) // set to the address of the last instruction
        begin
 
-         $stop;
+         $finish;
        end
    end  
 end //end always

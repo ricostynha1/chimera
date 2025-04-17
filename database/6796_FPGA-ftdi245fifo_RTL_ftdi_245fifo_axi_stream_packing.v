@@ -77,7 +77,7 @@ always @ (*) begin
 end
 
 
-//always @ (posedge clk) if (r_count > POW_EW) begin $display("***error : axi_stream_packing_imm"); $stop; end
+//always @ (posedge clk) if (r_count > POW_EW) begin $display("***error : axi_stream_packing_imm"); $finish; end
 
 
 

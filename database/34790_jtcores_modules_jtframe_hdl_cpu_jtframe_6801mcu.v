@@ -72,7 +72,7 @@ localparam M = MODEL=="MC6801"   ? M6801   :
                MODEL=="HD63701V" ? H6301   : -1;
 /* verilator lint_on WIDTHEXPAND */
 
-initial if( M<0 ) begin $display("Invalid value for MODEL in %m"); $stop; end
+initial if( M<0 ) begin $display("Invalid value for MODEL in %m"); $finish; end
 
 
 wire        buf_we, irq1, irq2;

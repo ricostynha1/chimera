@@ -45,7 +45,7 @@ initial begin
     end
 
     #100;
-    $stop;
+    $finish;
 end
 
 GTP_GRS GRS_INST(

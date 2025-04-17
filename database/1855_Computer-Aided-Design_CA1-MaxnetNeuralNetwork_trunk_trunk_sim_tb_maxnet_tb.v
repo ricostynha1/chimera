@@ -26,7 +26,7 @@ module maxnet_tb();
         #10 start = 0;
         #200 start = 1;
         #10 start = 0;
-        #3000 $stop;
+        #3000 $finish;
         
     end
 

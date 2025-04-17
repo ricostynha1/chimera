@@ -440,7 +440,7 @@ end
   end else begin
     if (pointer_k >= (10-UNROLL)) begin
       // $display("pointer_k 1: %h, last_cipher_iteration: %b", pointer_k, last_cipher_iteration);
-      // $stop;
+      // $finish;
       pointer_k <= 0; // Modulo 10 counter for AES iteration
       iteration <=  iteration +1;
     end else begin

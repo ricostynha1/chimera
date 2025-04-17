@@ -55,7 +55,7 @@ initial begin
 
 		#200
 	
-	$stop;
+	$finish;
 end
  bn_multi  UUT (x,Out,clk,reset);
 

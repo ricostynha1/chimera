@@ -56,7 +56,7 @@ module testbench;
         end
 
         `ifdef MODEL_TECH  // Mentor ModelSim and Questa
-            $stop;
+            $finish;
         `else
             $finish;
         `endif

@@ -151,22 +151,22 @@ module wbm2axisp #(
 		// the AXI width it is driving.  It can only handle widths
 		// mismatches in the other direction
 		if (C_AXI_DATA_WIDTH < DW)
-			$stop;
+			$finish;
 		if (DW == 8 && AW != C_AXI_ADDR_WIDTH)
-			$stop;
+			$finish;
 
 		// There must be a definitive relationship between the address
 		// widths of the AXI and WB, and that width is dependent upon
 		// the WB data width
 		if (C_AXI_ADDR_WIDTH != AW + $clog2(DW)-3)
-			$stop;
+			$finish;
 		if (	  (C_AXI_DATA_WIDTH / DW !=32)
 			&&(C_AXI_DATA_WIDTH / DW !=16)
 			&&(C_AXI_DATA_WIDTH / DW != 8)
 			&&(C_AXI_DATA_WIDTH / DW != 4)
 			&&(C_AXI_DATA_WIDTH / DW != 2)
 			&&(C_AXI_DATA_WIDTH      != DW))
-			$stop;
+			$finish;
 	end
 	// }}}
 

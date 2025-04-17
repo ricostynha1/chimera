@@ -102,7 +102,7 @@ module fifo_TB;
 			wr_data=i;
 			@(negedge clk);
 		   end	
-		$stop;	
+		$finish;	
 	end
 	
 	initial begin

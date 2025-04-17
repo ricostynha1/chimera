@@ -61,7 +61,7 @@ module testbench;
             sw  <= $random;
         end
 
-        $stop;
+        $finish;
     end
 
 endmodule

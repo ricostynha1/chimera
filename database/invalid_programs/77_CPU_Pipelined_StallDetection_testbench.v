@@ -180,7 +180,7 @@ StallDetection stallDetector(.EXop(EXop), .EXrp(EXrp), .EXrm(EXrm), .EXrn(EXrn),
    $display("[IDSTALL] IDop=BNE, EXop=LUI, EXrn=IDrn");
    setupStall(IDstall, IDop, BNE, EXop, LUI, EXrn, IDrn); #10;
    verifyEqual(IDstall, 1);
-
+
    $display("[IDSTALL] IDop=BNE, EXop=ORI, EXrn=IDrm");
    setupStall(IDstall, IDop, BNE, EXop, ORI, EXrn, IDrm); #10;
    verifyEqual(IDstall, 1);

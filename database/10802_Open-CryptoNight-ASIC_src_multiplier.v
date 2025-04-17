@@ -19,7 +19,7 @@ initial begin
 	$display("MULTIPLIER_DELAY == %0d", MULTIPLIER_DELAY);
 	if (MULTIPLIER_DELAY < 1 || MULTIPLIER_DELAY > 3) begin
 		$display("*** MULTIPLIER_DELAY misconfigured! ****");
-		$stop;
+		$finish;
 	end
 end
 

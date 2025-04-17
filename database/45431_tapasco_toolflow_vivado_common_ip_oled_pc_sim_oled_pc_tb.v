@@ -107,7 +107,7 @@ module oled_pc_tb #(
     repeat (10000) @(posedge clk);
     for (i = 0; i < C_COUNTER_N; i = i + 1) begin
       show_pc_value(i);
-      if (|oled_pc_i.oled_pc_i.r_pc[i]) $stop; // stop on error
+      if (|oled_pc_i.oled_pc_i.r_pc[i]) $finish; // stop on error
     end
 
     $display("\nFINISHED - TEST PASSED");
